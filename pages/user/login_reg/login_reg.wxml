@@ -1,0 +1,112 @@
+<view hidden="{{currentStep != 0}}" style="margin-top:20rpx; background-color:#f8f8f8;overflow:hidden;height:1200rpx;">
+  <view class="success_info">
+  </view>
+  <view class="loginImg">
+    <image src="../../../images/all/logo.png"></image>
+    <!-- 欢迎登录进入白幡上町分销 -->
+  </view>
+  <view class='boxWhite'>
+    <view class="bottomLine">
+      <input placeholder="手机号/用户名/电子邮件地址" bindinput='inputUser' />
+    </view>
+    <view class="bottomLine">
+      <input placeholder="密码" bindinput='inputPassword' password />
+    </view>
+  </view>
+  <view class='btnBox' style=" padding-top:0rpx;">
+    <button type="primary" bindtap="login" hover-class="other-button-hover" open-type="getUserInfo" bindgetuserinfo='UserLogin'>用户名登录</button>
+    <view style="height:25rpx;"></view>
+    <button type="primary" class='wxBtn' hover-class="other-button-hover" open-type="getUserInfo" bindgetuserinfo='bindGetUserInfo'>
+      <view class='iconfont icon-weixin1 weixin_icons'></view>
+      微信用户一键登录</button>
+       <view class='forget'><navigator url="../forget/forget" hover-class="none">忘记密码？</navigator></view>  
+  </view>
+  <!--弹窗-->
+
+  <view class="modal-mask" bindtap="hideModal" catchtouchmove="preventTouchMove" wx:if="{{showModal}}"></view>
+  <view class="modal-dialog" wx:if="{{showModal}}">
+    <view class="modal-content">
+      如果已有用户名，请取消后通过用户名和密码登录，否则请注册后登录。
+    </view>
+    <view class="modal-footer">
+      <view class="btn-cancel" bindtap="onCancel" data-status="cancel">取消</view>
+      <view class="btn-confirm" bindtap="onConfirm" data-status="confirm">注册</view>
+    </view>
+  </view>
+</view>
+<!-- 注册 -->
+<view hidden="{{currentStep!=1}}" style="margin-top:20rpx;">
+  <!--<view class="success_info">本网站正在活动期间，请加客服微信aikobe2407，给您免费设置黄金会员，惊喜折扣哦。
+  </view>-->
+  <view class="welcome"></view>
+  <view class='boxReg'>
+    <view class="bottomLine">
+      <view class='label_name'>用户名</view>
+      <view class='inputBox'>
+        <input placeholder="请输入用户名" placeholder-class="input-holder" bindblur='inputUser' class="input" />
+      </view>
+    </view>
+    <view class="bottomLine">
+      <view class='label_name'>密码</view>
+      <view class='inputBox'>
+        <input placeholder="请输入密码" placeholder-class="input-holder" bindblur='inputPassword' class="input" password/>
+      </view>
+    </view>
+    <view class="bottomLine">
+      <view class='label_name'>邮件地址</view>
+      <view class='inputBox'>
+        <input placeholder-class="input-holder" bindinput="inputMail" class="input" placeholder="请输入电子邮件地址" />
+      </view>
+    </view>
+    <view class="bottomLine">
+      <view class='label_name'>手机号</view>
+      <view class='inputBox'>
+        <input placeholder-class="input-holder" type="number" maxlength="11" bindinput="inputChange" class="input" placeholder="请输入手机号"></input>
+      </view>
+    </view>
+    <view>
+      <view class='label_name'>微信号</view>
+      <view class='inputBox'>
+        <input placeholder-class="input-holder" bindinput="inputWeiXin" class="input" placeholder="请输入微信号" />
+      </view>
+    </view>
+  </view>
+  <view class='qdBox'>
+    <view class='xcqd'>销售渠道</view>
+    <checkbox-group bindchange="checkboxChange">
+      <label class="checkbox" wx:for-items="{{channel}}" wx:key=''>
+        <checkbox value=" {{channel[index].code}}" />{{channel[index].name}}
+      </label>
+    </checkbox-group>
+  </view>
+  <view class='boxReg'>
+    <view class='user_address'>     
+      <view class='reginputleft'>
+        <picker bindchange="bindWorkdateChange" value="{{indexWorkDate}}" range="{{workdate}}" range-key="name" indicator-style="height: 50px;" value="{{value}}" >
+          <view>{{workdate[indexWorkDate].name}}</view>
+        </picker>        
+      </view>  
+      <view class='iconfont icon-jiantou-copy right' bindtap="bindWorkdateChange" ></view>    
+    </view>
+    <view class='user_address'>     
+      <view class='reginputleft'>
+        <picker bindchange="bindSaleNumChange" value="{{indexSaleNum}}" range="{{salenum}}" range-key="name" indicator-style="height: 50px; " value="{{value}}">
+          <view> {{salenum[indexSaleNum].name}} </view>
+        </picker>
+      </view>
+      <view class='iconfont icon-jiantou-copy right'></view> 
+    </view>
+    <view class='user_address'>      
+      <view class='reginputleft'>
+        <picker bindchange="bindInfoFromChange" value="{{indexInfoFrom}}" range="{{infofrom}}" range-key="name" indicator-style="height: 50px;" value="{{value}}">
+          <view> {{infofrom[indexInfoFrom].name}} </view>
+        </picker>
+      </view>
+      <view class='iconfont icon-jiantou-copy right'></view>
+    </view>
+  </view>
+  <view class='btnBox'>
+    <button type="primary" class='regBtn float-right' size="{{primarySize}}" hover-class="other-button-hover " bindtap='onRegister'>注册</button>
+    <button type="primary" class='wxBtn regBtn' hover-class="other-button-hover " bindtap='onBack'>返回</button>
+  </view>
+</view>

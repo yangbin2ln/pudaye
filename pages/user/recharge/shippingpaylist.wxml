@@ -1,0 +1,87 @@
+<view class="step_group">
+  <view class="step_item" wx:for="{{stepList}}" wx:for-item="index" wx:key="" style="{{index==selectIndex?'border-bottom:2px #f55253 solid;width:50%;color:#f55253;':'width:50%;'}};" data-index='{{index}}' bindtap='tabClick'>{{stepList[index]}}</view>
+</view>
+
+<view>
+  <!--弹窗-->
+  <view class="modal-mask" bindtap="hideModal" catchtouchmove="preventTouchMove" wx:if="{{url!=''}}"></view>
+  <view class="modal-dialog" wx:if="{{url!=''}}" style='margin-top:200rpx;'>
+    <view class='iconfont icon-zhifubao1 zhifubaoLogo'></view>
+    <view class="modal-title">
+      <view class='close' bindtap="hideModal">X</view>
+    </view>
+    <view>
+      <view class='paylogoTxt'>{{projectName}}</view>
+      <view>
+        <image class='payEwm' mode="widthFix" src="{{url}}"></image>
+      </view>
+      <view class='step'>
+        <view>支付步骤</view>
+        <view>1，请保存二维码到系统相册</view>
+        <view>2，打开支付宝，通过扫一扫>相册</view>
+        <view class='t30'>进行扫码支付</view>
+      </view>
+    </view>
+    <view class='svaeImage' hidden='{{isAuth}}' bindtap='saveImage' data-url='{{url}}'>保存图片</view>
+    <button class='svaeImage' hidden='{{!isAuth}}' open-type="openSetting" bindopensetting="opensetting" data-url='{{url}}'>设置权限并保存图片</button>
+  </view>
+  <view class='h100'></view>
+  <view wx:for="{{shipppingpayList}}" wx:key="box_sn" wx:for-item="item" class="goods_colBox">
+    <view>
+      <view>
+
+        <view class='labText'>
+          <view class='iconfont icon-wuliu yundanhao'></view>箱号：</view>{{item.box_sn}} </view>
+    </view>
+
+    <view class='line'>
+      <view wx:for="{{item.orderNO}}" wx:for-item="orderNO" wx:key="index">
+        <view class='labText'>订单号：</view>{{orderNO}} </view>
+    </view>
+    <view class='orderBar'>
+      <view class='orderBarRight'>
+        <view class='labText'>金额：</view>
+        <view class='price'>￥{{item.shipping_fee}}</view>
+      </view>
+      <view>
+        <view class='labText hardly'> 重量：</view>{{item.weight}} kg</view>
+    </view>
+  </view>
+  <view wx:if="{{selectIndex==0  && shipppingpayList.length>0}}" class='total'>
+    <view wx:if="{{sumPrice!=-1}}" class='orderBarRight'>
+      <view class='labText'>总金额：</view>
+      <view class='totalPrice'>￥{{sumPrice}}</view>
+    </view>
+  </view>
+
+  <view class='centerText' wx:if="{{shipppingpayList.length==0}}">
+    <view>
+      <image class="cartImg" src="{{imgurl}}all/noorder.png"></image>
+    </view>
+    <text class='f30'>没有宝贝哦，不如去添加宝贝</text>
+    <view class='btnBox'>
+      <view class='leftBtn' bindtap='goHome'>去购物</view>
+      <view class='rightBtn' bindtap='goCollect'>查看收藏夹</view>
+    </view>
+  </view>
+  <view class='centerText' wx:if="{{showPay && shipppingpayList.length>0}}">
+    <view class='btnBox'>
+      <button type="primary" hover-class="other-button-hover" bindtap='actionSheet'>去支付</button>
+    </view>
+  </view>
+  <form bindsubmit="itemTap" report-submit="true">
+    <action-sheet hidden="{{actionSheetHidden}}" catchchange="actionSheet">
+      <block wx:for-items="{{actionSheetItems}}" wx:key="">
+        <action-sheet-item>
+          <button formType="submit" class='con_listbox' data-index='{{actionSheetCode[index]}}'>
+            <view class="iconfont {{actionSheetIcon[index]}}">
+              {{item}}
+            </view>
+          </button>
+        </action-sheet-item>
+      </block>
+      <!--自动隐藏action-sheet-->
+      <action-sheet-cancel>取消</action-sheet-cancel>
+    </action-sheet>
+  </form>
+</view>

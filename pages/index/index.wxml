@@ -1,0 +1,78 @@
+<scroll-view class="container" scroll-y="true" scroll-into-view="{{position}}" scroll-top="{{scrollTop}}" scroll-with-animation="true" style='height:1280rpx' bindscrolltolower="onReachBottom" bindscroll="scroll">
+  <include src="../common/topinput/topinput" />
+  <!-- 轮播图 -->
+  <view class='banner' style=''>
+    <image  class="goods_image" src="../../../images/banner.jpg"></image>
+  </view>
+  <text class='tit'>帮我找铺</text>    
+  <view>
+    <view style="width:100%;heigth:100%;" class='content'>
+      <!--商品展示-->
+      <view class="goods">
+
+        <view class="goods_show_box-3">
+          <view class="goods_box">
+
+          <navigator url="../goods/goods" hover-class="navigator-hover">         
+            <view class="img_box">
+              <image  class="goods_image" src="../../../images/proImg.jpg"></image>
+            </view>
+            <view class="text_box">
+              <view class="goods_name">华远枫悦</view>              
+              <view class="goods_desc">
+                <view class="goods_sell_number">79-220㎡</view>
+                <view>均价<view class="goods_price ">￥155元</view>/㎡/月</view>
+              </view>
+              <view class='protag'>
+                <view>近地铁</view>
+                <view>热门商圈</view>
+                <view>品牌开发商</view>
+              </view>
+              <view class='addr'>未央区-西安北站</view>              
+            </view>
+          </navigator>  
+
+          </view>
+        </view>
+       <view class="goods_show_box-3">
+          <view class="goods_box">
+
+          <navigator url="../goods/goods" hover-class="navigator-hover">         
+            <view class="img_box">
+              <image  class="goods_image" src="../../../images/proImg.jpg"></image>
+            </view>
+            <view class="text_box">
+              <view class="goods_name">华远枫悦</view>              
+              <view class="goods_desc">
+                <view class="goods_sell_number ">79-220㎡</view>
+                <view>均价<view class="goods_price ">￥155元</view>/㎡/月</view>
+              </view>
+              <view class='protag'>
+                <view>近地铁</view>
+                <view>热门商圈</view>
+                <view>品牌开发商</view>
+              </view>
+              <view class='addr'>未央区-西安北站</view>              
+            </view>
+          </navigator>  
+
+          </view>
+        </view>
+      </view>
+    </view>   
+  </view>
+</scroll-view>
+<view class='fudong'>
+  <view class="widget-goTop " wx:if="{{floorstatus}}" bindtap="goTop">
+    <view class='iconfont icon-huidingbu litt'></view>
+  </view>
+  <view class="widget-goTop " bindtap="scancodeEx">
+    <button open-type="contact" style='height:auto;line-height:60rpx' hidden="{{formtype}}">
+      <view class='iconfont icon-kefuICON kefu'></view>
+    </button>
+  </view>
+
+
+
+
+</view>

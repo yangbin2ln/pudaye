@@ -1,0 +1,64 @@
+<view>
+  <!-- 一行五个 -->
+  <view class='h220'>
+    <!-- <image src="{{imgurl}}user/BannerBg.png" class='slide-image'></image> -->
+    <view class='userBg'>
+      <open-data type="userAvatarUrl" class='touimage'></open-data>
+      <view class='userText' >
+
+      <open-data type="userNickName" class='slide-image-text'>
+      </open-data> 
+      <view  wx:if="{{isLogin && user_card}}" class='MemberID'>会员卡号：{{user_card}}</view>  
+      <view class='slide-image-text'>
+        <view wx:if="{{!isLogin}}">
+          <navigator url="login_reg/login_reg">
+            <text>登录</text>
+          </navigator>
+        </view>
+        <view wx:else class='state'>
+          <view wx:if="{{!is_validated}}">
+            <text>状态：未激活</text>
+            <text>※请联系客服激活并重新登录!</text>
+          </view>
+          <view wx:else>
+            <text>状态：已激活</text>
+          </view>
+        </view>
+      </view>
+    </view>
+    </view>
+  </view> 
+  <!-- 一行四个 -->
+  <view class='title'>我的服务</view>
+  <view class="userMenu_group ">    
+    <view class='userMenu_box'>
+      <navigator url="collect/collect">
+        <view class='iconfont icon-shoucang tem04-imgb'></view>
+        <text>我的收藏</text>
+      </navigator>
+    </view>    
+    <view class='userMenu_box'>
+      <navigator url="userInfo/userInfo">
+        <view class='iconfont icon-yonghuxinxi tem04-imgb'></view>
+        <text>信息设置</text>
+      </navigator>
+    </view>
+    <view class='userMenu_box'>
+      <navigator url="service/service">
+        <view class='iconfont icon-bangzhudeng tem04-imgb'></view>
+        <text>使用帮助</text> </navigator>
+    </view> 
+    <view class='userMenu_box' bindtap='logout'>
+      <view class='iconfont icon-tongyong-tuichudenglutubiao tem04-imgb'></view>
+      <text>退出登录</text>
+    </view>
+
+  </view>
+  
+</view>
+<view class='fudong'>
+  <view class="widget-goTop" wx:if="{{floorstatus}}" bindtap="goTop">
+    <view class='iconfont icon-huidingbu'></view>
+  </view>
+  <button open-type="contact" class='iconfont icon-kefuICON bot-kefu'></button>
+</view>

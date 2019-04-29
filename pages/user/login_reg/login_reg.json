@@ -1,0 +1,11 @@
+{
+    "pages": [
+        "pages/user/login_regOk/login_regOk"
+    ],
+    "window": {
+        "backgroundTextStyle": "light",
+        "navigationBarBackgroundColor": "#f55253",
+        "navigationBarTitleText": "登录",
+        "navigationBarTextStyle": "white"
+    }
+}

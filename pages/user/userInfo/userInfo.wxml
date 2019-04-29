@@ -1,0 +1,80 @@
+<view class='boxWhite mbottom0'>
+  <view class='bottomLine'>
+    <view class='label_name'>用户名</view>
+    <view class='inputBox'>
+      <input value='{{username}}' disabled='true' style='color:#999;' />
+    </view>
+  </view>
+  <view class='bottomLine'>
+    <view class='label_name'>手机号</view>
+    <view class='inputBox'>
+      <input value='{{mobile}}' disabled='true' style='color:#999;' />
+    </view>
+  </view>
+  <view class='bottomLine'>
+    <view class='label_name'>电子邮件</view>
+    <view class='inputBox'>
+      <input placeholder="请输入电子邮件" value='{{email}}' bindinput="email" />
+    </view>
+  </view>
+  <view class='bottomLine'>
+    <view class='label_name'>微信号</view>
+    <view class='inputBox'>
+      <input placeholder="请输入微信号" value='{{content}}' bindinput='weiNo' />
+    </view>
+  </view>
+  <view class='bottomLine'>
+    <view class='label_name'>性别</view>
+    <view class='inputBox'>
+      <radio-group class="radio-group" bindchange="radioChange">
+        <label class="radio" wx:for="{{items}}" wx:key="">
+          <radio value="{{item.value}}" checked="{{item.checked}}" />{{item.name}}
+        </label>
+      </radio-group>
+    </view>
+  </view>
+  <view class='bottomLine'>
+    <view class='label_name'>生日</view>
+    <picker class='inputBox' mode="date" value="{{birthday}}" start="1900-01-01" end="2050-12-31" bindchange="bindDateChange">
+      <view class="picker">
+        {{birthday}}
+      </view>
+    </picker>
+  </view>
+</view>
+<view class='btnBoxInfo'>
+  <button type="primary" size="{{primarySize}}" loading="{{loading}}" plain="{{plain}}" disabled="{{disabled}}" bindtap="updateUserInfo" hover-class="other-button-hover">更新信息 </button>
+</view>
+<view hidden='{{ishow==1}}'>
+  <view class='boxWhite mbottom0'>
+    <!-- <view class='bottomLine'>
+      <view class='label_name'>原密码</view>
+      <view class='inputBox'>
+        <input placeholder="请输入原密码" password bindinput='oldPassword' />
+      </view>
+    </view> -->
+    <view class='bottomLine'>
+      <view class='label_name'>新密码</view>
+      <view class='inputBox'>
+        <input placeholder="请输入新密码" password bindinput='newPassword' />
+      </view>
+    </view>
+    <view class='bottomLine'>
+      <view class='label_name'>确认密码</view>
+      <view class='inputBox'>
+        <input placeholder="请确认新密码" password bindinput='rnewPassword' />
+      </view>
+    </view>
+  </view>
+  <view class='btnBoxInfo'>
+    <button type="primary" size="{{primarySize}}" loading="{{loading}}" plain="{{plain}}" disabled="{{disabled}}" bindtap="editPassword" hover-class="other-button-hover">修改密码 </button>
+  </view>
+  <view class='Tips'>
+    <text>※ 解除微信号：</text>
+    <text class='t50'>为了方便用户名在其他微信号上可以正常登录，请解除微信号。</text>
+    <text class='t50'>重新通过用户名登录后，会自动绑定当前微信号进行微信号一键登录。</text>
+  </view>
+  <view class='btnBox ptop0'>
+    <button type="primary" class='wxBtn regBtn' bindtap="cancelOpenId" hover-class="other-button-hover">解除微信号 </button>
+  </view>
+</view>

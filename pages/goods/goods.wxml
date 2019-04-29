@@ -1,0 +1,80 @@
+<scroll-view scroll-y="true" bindscroll="scroll" scroll-top="{{scrollTop}}" style="position:absolute; top:0; left:0; right:0; bottom:0;">
+  <view class='con'>
+    <view class='xq_banner'>
+      <image  class="goods_image" src="../../../images/xq_banner.jpg"></image>
+    </view>
+    <view class='title'>华远枫悦</view>
+    <view class='introduce' >在租商铺2套</view>
+    <view class='protag'>
+        <view>近地铁</view>
+        <view>热门商圈</view>
+        <view>品牌开发商</view>
+        <view>品牌物业</view>
+        <view>充足车位</view>
+    </view>
+    <view class='jiage'>
+      <view><text>参考出租均价</text><text class='price'>155元/m²/月</text></view>
+      <view><text>面积</text><text>79-220m²</text></view>
+    </view>
+</view>
+
+ <view class='cont'>
+        <view>
+          <text>43000元/m²</text> 
+           <view class='protag'>
+              <view>在售</view>
+              <view>推荐</view>
+              <view>住宅</view>
+          </view>
+        </view>        
+        <view>
+          <view class='shopLabel'>开盘时间：2019-03-15</view>
+         <view class='shopLabel'>楼盘地址：荣兴路与五昆路交汇处></view>           
+        </view>        
+      </view>
+      <view class='module' >
+        <view class='title'>导客规则<navigator url="../user/order/order" hover-class="navigator-hover"> 查看更多</navigator></view>        
+        <text>可隐号报备，隐号格式：前3后4，如：139****1234</text>
+      </view>
+      <view>
+        <view class='title'>主力户型</view>
+        <text>户型一</text>
+      </view>
+      <view>
+        <view class='title'>楼盘信息</view>
+        <text>开发商：上海</text>
+      </view>
+    <view class='iconfont icon-kefuICON kefu' bindtap="icons" hidden="{{!formtype}}"></view>
+    <!-- 底部输入框及文字 -->
+    <view style="height:50rpx;"></view>
+  
+  <!-- 详情底部 -->
+  <view class='bottomcar'>
+    <view class='bottomcar-home home-home'>
+      <view>
+        <view class='save' wx:if="{{collect==0}}">
+          <view class='iconfont icon-guanzhu save' data-id="{{goodsid}}" bindtap='collect'></view>
+        </view>
+        <view class='save' wx:else>
+          <view class='iconfont icon-shoucang save' data-id="{{goodsid}}" bindtap='collect'></view>
+        </view>
+        <view class="{{ tabItem.color}}" data-id="{{goodsid}}" bindtap='collect'>分享</view>
+      </view>
+    </view>
+    <view class='bottomcar-home'>
+      <view>
+        <view class='iconfont icon-gouwuche img-bot' bindtap="gotocart"></view>
+        <view class="{{ tabItem.color}}" bindtap="gotocart">项目经理</view>
+      </view>
+    </view>    
+    <view class='bottomcar-buy now-in' bindtap='buynow'>
+      <text>咨询经纪人</text>
+    </view>
+  </view>
+</scroll-view>
+<view class='fudong'>
+  <view class="widget-goTop" wx:if="{{floorstatus}}" bindtap="goTop">
+    <view class='iconfont icon-huidingbu litt'></view>
+  </view>
+  <button open-type="contact" class='iconfont icon-kefuICON litt bot-kefu'></button>
+</view>

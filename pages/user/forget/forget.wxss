@@ -1,0 +1,9 @@
+.yzm{border-left:1px solid #eee;
+height:65rpx;
+width:200rpx;
+text-align:center;
+float:right;
+margin-right:20rpx;
+margin-top:10rpx;
+line-height: 65rpx;
+}

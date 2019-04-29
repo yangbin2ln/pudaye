@@ -1,0 +1,17 @@
+<view>
+  <view class="step_group">
+    <view class="step_item" wx:for="{{stepList}}" wx:for-item="index" wx:key="" style="{{index==orderAttr?'border-bottom:2px #f55253 solid;color:#f55253;':''}};" data-index='{{index}}' bindtap='tabClick'>{{stepList[index]}}</view>
+  </view>
+  <view class='h100'></view>
+  <view wx:if="{{orderList.length == 1}}" class='centerText'>
+    <view>
+      <image class="cartImg" src="{{imgurl}}all/noorder.png"></image>
+    </view>
+    <text class='f30'>暂无</text>    
+  </view>
+  <view wx:if="{{orderList.length == 0}}" class='centerText'>
+    <view>
+     内容简介内容简介内容简介内容简介内容简介内容简介内容简介
+    </view>   
+  </view>
+</view>

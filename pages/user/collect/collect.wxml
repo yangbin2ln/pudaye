@@ -1,0 +1,24 @@
+<view class="container">
+  <view wx:if="{{collect.length>0}}" class="touch-item {{item.isTouchMove ? 'touch-move-active' : ''}}" data-index="{{index}}" bindtouchstart="touchstart" bindtouchmove="touchmove" wx:for="{{collect}}" wx:key="">
+    <view class="h25"></view>
+    <view class="content" data-id="{{item.goods_id}}" catchtap='goGoods'>
+      <view class="goodsText">
+        <view class='goods_name'>{{item.goods_name}}</view>
+        <!-- <view class='sel'>会员价格：￥{{item.shop_price}}</view> -->
+      </view>
+      <view class="goodsImgBox">
+        <image mode="aspectFit" src="{{goodsimgurl+item.goods_img}}"></image>
+      </view>
+    </view>
+    <view class="del" catchtap="delCollect" data-index="{{index}}" data-id="{{item.rec_id}}">取消收藏</view>
+  </view>
+  <view hidden='{{collect.length>0}}' class='text-center'>
+    <view>
+      <image class="cartImg" src="{{imgurl}}all/category.png"></image>
+    </view>
+    <text class='f30'>没有宝贝哦，不如去添加宝贝</text>
+    <view class='btnBox'>
+      <view class='Btn' bindtap='goHome'>去收藏</view>
+    </view>
+  </view>
+</view>

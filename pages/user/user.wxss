@@ -1,0 +1,148 @@
+@import "../common/topinput/topinput";
+
+page {
+  font-size: 28rpx;
+}
+
+#littlegroup {
+  display: flex;
+  flex-direction: column;
+  width: 25%;
+  text-align: center;
+}
+
+.tem5 {
+  display: flex;
+  flex-direction: row;
+  background: #fff;
+  padding-top: 10rpx;
+}
+
+.tem05-imgb {
+  width: 55rpx;
+  height: 55rpx;
+  margin: 10rpx auto;
+  display: flex;
+  font-size: 50rpx;
+  color: #f55253;
+}
+
+.tem04-imgb {
+  width: 55rpx;
+  height: 55rpx;
+  margin: 10rpx auto;
+  display: flex;
+  font-size: 50rpx;
+  color: #f55253;
+  margin-bottom: 0rpx;
+}
+
+.title {
+  font-size: 30rpx;
+  line-height: 80rpx;
+  margin-left: 40rpx;
+  font-weight: bold;
+}
+
+.con-text {
+  background-color: white;
+  margin-top: -21rpx;
+  line-height: 17rpx;
+}
+
+.userMenu_group {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  background: #fff;
+}
+
+.userMenu_box {
+  width: 165rpx;
+  margin: 10rpx;
+  text-align: center;
+  justify-content: center;
+  color: #000;
+  border-radius: 5rpx;
+  font-family: "Microsoft YaHei";
+  line-height: 60rpx;
+}
+
+.slide-image {
+  width: 100%;
+  height: 450rpx;
+  position: absolute;
+  z-index: -1;
+  margin-top: 60rpx;
+}
+
+.slide-image-text {
+  display: block;
+  justify-content: center;
+  overflow: hidden;
+  font-size: 40rpx;
+  font-weight: bold;
+  line-height: 60rpx;
+  text-align: left;
+  margin-left: 20rpx;
+  width: 400rpx;
+}
+
+.h220 {
+  height: 240rpx;
+}
+
+.touimage {
+  overflow: hidden;
+  width: 161rpx;
+  height: 161rpx;
+  border-radius: 50%;
+  position: absolute;
+  margin-left: 130rpx;
+}
+
+.reddot {
+  position: relative;
+  width: 30rpx;
+  height: 30rpx;
+  border-radius: 30rpx;
+  background: white;
+  text-align: center;
+  vertical-align: middle;
+  color: #f55253;
+  line-height: 30rpx;
+  font-size: 21rpx;
+  border-color: #f55253;
+  border-style: solid;
+  border-width: 2rpx;
+  top: -130rpx;
+  right: -95rpx;
+}
+
+.userBg {
+  background: #fff;
+  padding-top: 40rpx;
+  padding-bottom: 40rpx;
+  height: 160rpx;
+}
+
+.state {
+  font-size: 24rpx;
+  color: #f00;
+  text-align: left;
+  line-height:45rpx;
+}
+
+.state text {
+  display: block;
+  height: 40rpx;
+}
+
+.userText {
+  margin-left: 300rpx;
+}
+
+.MemberID{font-size:26rpx;
+text-indent:20rpx;
+color:#f55253;
+}

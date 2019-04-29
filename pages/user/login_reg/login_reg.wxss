@@ -1,0 +1,219 @@
+@import "../../common/topinput/topinput";
+
+.otherLoginBox {
+  text-align: center;
+}
+
+.step_item {
+  width: 50%;
+  font-size: 30rpx;
+  font-family: '微软雅黑';
+  text-align: center;
+  margin-top: 30rpx;
+  margin-left: 2%;
+  margin-right: 2%;
+  margin-bottom: 5rpx;
+  padding-bottom: 20rpx;
+  color: #666;
+}
+
+.weixin_icons {
+  font-size: 46rpx;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 10rpx;
+}
+
+.loginImg {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 70rpx;
+  font-size: 60rpx;
+  padding-top: 80rpx;
+}
+
+.loginImg image {
+  width: 155rpx;
+  height: 155rpx;
+}
+
+.paimaryButton {
+  margin: auto;
+  font-family: "微软雅黑";
+  color: #fff;
+  background-color: #f55253;
+  padding-left: 14rpx;
+  padding-right: 14rpx;
+  box-sizing: border-box;
+  font-size: 18rpx;
+  text-align: center;
+  text-decoration: none;
+  line-height: 2.55555556;
+  border-radius: 5rpx;
+}
+
+.right {
+  margin-right: 20rpx;
+}
+
+.welcome {
+  height: 35rpx;
+  /* line-height:80rpx;
+  padding-left:30rpx;
+  margin-top:40rpx;
+  border:1px dotted #999;
+  border-radius:4rpx;
+  width:500rpx;
+  margin:10rpx auto; */
+  background: #f8f8f8;
+}
+
+.xcqd {
+  line-height: 50rpx;
+  margin-bottom: 20rpx;
+  font-size: 30rpx;
+}
+
+.qdBox {
+  padding-bottom: 30rpx;
+  text-align: center;
+  background: #f8f8f8;
+  padding-top: 30rpx;
+}
+
+.qdBox label {
+  margin-right: 20rpx;
+}
+
+.p20 {
+  line-height: 50rpx;
+  height: 50rpx;
+  margin: 20rpx 20rpx 0rpx 20rpx;
+}
+
+.user_address {
+  display: block;
+}
+
+.show-btn {
+  margin-top: 100rpx;
+  color: #2c2;
+}
+
+.modal-mask {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #000;
+  opacity: 0.5;
+  overflow: hidden;
+  z-index: 9000;
+  color: #fff;
+}
+
+.modal-dialog {
+  width: 540rpx;
+  overflow: hidden;
+  position: fixed;
+  top: 50%;
+  left: 0;
+  z-index: 9999;
+  background: #f9f9f9;
+  margin: -180rpx 105rpx;
+  border-radius: 36rpx;
+}
+
+.modal-title {
+  padding-top: 50rpx;
+  font-size: 36rpx;
+  color: #030303;
+  text-align: center;
+}
+
+.modal-content {
+  padding: 50rpx 32rpx;
+}
+
+.modal-input {
+  display: flex;
+  background: #fff;
+  border: 2rpx solid #ddd;
+  border-radius: 4rpx;
+  font-size: 28rpx;
+}
+
+/*
+.input {
+  width: 100%;
+  height: 82rpx;
+  font-size: 28rpx;
+  line-height: 28rpx;
+  padding: 0 20rpx;
+  box-sizing: border-box;
+  color: #333;
+}
+*/
+
+input-holder {
+  color: #666;
+  font-size: 28rpx;
+}
+
+.modal-footer {
+  display: flex;
+  flex-direction: row;
+  height: 86rpx;
+  border-top: 1px solid #dedede;
+  font-size: 34rpx;
+  line-height: 86rpx;
+}
+
+.btn-cancel {
+  width: 50%;
+  color: #666;
+  text-align: center;
+  border-right: 1px solid #dedede;
+}
+
+.btn-confirm {
+  width: 50%;
+  color: #ec5300;
+  text-align: center;
+}
+
+.user_address {
+  line-height: 80rpx;
+  height: 80rpx;
+}
+
+.regBtn {
+  width: 315rpx;
+  display: inline-block;
+}
+
+.float-left {
+  float: left;
+}
+
+.float-right {
+  float: right;
+}
+
+.reginputleft {
+  padding-left: 20rpx;
+  position: absolute;
+  width: 650rpx;
+}
+
+.forget navigator {
+  margin-top:10rpx;
+  text-align:right;
+  color:#f55253;
+  height:60rpx;
+  line-height:60rpx;
+  display:inline-block;
+  float:right;
+  padding-left:20rpx;
+}

@@ -1,0 +1,45 @@
+.serviceTop image {
+  width: 750rpx;
+  height: 310rpx;
+}
+
+.kfbox {
+  width: 720rpx;
+  height: 350rpx;
+  margin: 50rpx auto;
+  text-align: center;
+}
+
+.kftitle {
+  font-size: 32rpx;
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 20rpx;
+}
+
+.service view {
+  margin: 26rpx;
+  display: inline-block;
+  text-align: center;
+  margin-bottom: 80rpx;
+}
+
+.service view text {
+  margin: 10rpx auto;
+  display: block;
+  color: #f55253;
+}
+
+.service image {
+  width: 360rpx;
+  height: 360rpx;
+}
+
+.f40 {
+  font-size: 40rpx;
+  font-weight: bold;
+}
+
+.f28 {
+  font-size: 28rpx;
+}

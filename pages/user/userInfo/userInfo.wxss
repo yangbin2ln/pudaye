@@ -1,0 +1,32 @@
+@import "../../common/topinput/topinput";
+
+/** wxss **/
+
+/** 修改button默认的点击态样式类**/
+
+.button-hover {
+  background-color: red;
+}
+
+/** 添加自定义button点击态样式类**/
+
+.other-button-hover {
+  background-color: blue;
+}
+
+.boxWhite input {
+  padding-left: 0rpx;
+}
+
+.mbottom0 {
+  margin-bottom: 0rpx;
+}
+
+.btnBoxInfo {
+  margin: 20rpx 40rpx 30px 40rpx;
+}
+
+.btnBoxInfo button[type=primary] {
+  background: #f55253;
+}
+.t50{ text-indent: 50rpx;  }

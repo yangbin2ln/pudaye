@@ -1,0 +1,122 @@
+@import "../common/topinput/topinput";
+.banner{margin-top:85rpx; text-align: center;}
+.banner image{width:692rpx;height:272rpx; margin: 0px auto;}
+.goods_desc view{ display: inline-block;}
+.addr{font-size: 25rpx; color: #999;}
+.noscroll {
+  height: 100%;
+  overflow: hidden;
+}
+
+
+.searchCriteria {
+  line-height: 50rpx;
+  width: 620rpx;
+  overflow-x: auto;
+  white-space: nowrap;
+  margin-left: 30rpx;
+  display: none;
+}
+
+.cart {
+  font-size: 36rpx;
+  color: #e81818;
+  float: right;
+  margin-top: 15px;
+  width: 100rpx;
+  height: 100rpx;
+  line-height: 100rpx;
+  text-align: center;
+  display: block;
+}
+
+.filter {
+  margin-top: 10rpx;
+  background: #fff;
+}
+
+.mtop115 {
+  margin-top: 135rpx;
+}
+
+.tag {
+  background: #959595;
+  border-radius: 10rpx;
+  display: inline-block;
+  color: #fff;
+  padding-left: 20rpx;
+  padding-right: 20rpx;
+  margin-top: 10rpx;
+  margin-left: 20rpx;
+}
+
+.tag view {
+  color: #fff;
+  display: inline-block;
+  margin-left: 20rpx;
+}
+
+.clear {
+  line-height: 70rpx;
+  margin-right: 30rpx;
+  position: absolute;
+  right: 0rpx;
+}
+
+.good_box {
+  width: 30rpx;
+  height: 30rpx;
+  position: fixed;
+  border-radius: 50%;
+  overflow: hidden;
+  left: 50%;
+  top: 50%;
+  z-index: +99;
+  background: #f55253;
+}
+
+.fixfilter {
+  position: fixed;
+  top: 68rpx;
+  z-index: 9999;
+}
+
+swiper {
+  display: block;
+  height: 375rpx;
+  text-align: center;
+  border-radius: 10rpx;
+}
+
+.slide-image {
+  width: 690rpx;
+  margin: 0rpx auto;
+  height: 375rpx;
+  border-radius: 10px;
+}
+.adbox{background:#fff;margin:13rpx auto;}
+.newBg {
+  text-align: center;  
+}
+
+.newBg image {
+  width: 690rpx;
+  margin: 0rpx auto;
+  border-radius: 10rpx;
+  height: 97rpx;
+}
+
+.tit {
+  margin-left: 30rpx;
+}
+.a01{width: 45%; height: 190rpx; display:inline-block;border-radius: 10rpx;margin: 8px;}
+.a01 image{ width: 100%; height: 190rpx; display:inline-block;border-radius: 10rpx;
+}
+.a02 image{ width: 205rpx; height: 160rpx; position: absolute;margin:0rpx 0rpx 0rpx 485rpx;border-radius: 10rpx;
+}
+.a03 image{ width: 205rpx; height:160rpx; position: absolute;margin:0rpx 0rpx 0rpx 270rpx;border-radius: 10rpx;
+}
+.a04 image{ width: 420rpx; height: 160rpx; position: absolute;margin:170rpx 0rpx 0rpx 270rpx;border-radius: 10rpx;
+}
+.a05 image{ width: 260rpx; height: 160rpx; position: absolute;margin:170rpx 0rpx 0rpx 0rpx;border-radius: 10rpx;
+}

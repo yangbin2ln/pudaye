@@ -1,0 +1,82 @@
+.inputtop {
+  background: #fff;
+  height: 67rpx;
+}
+
+swiper {
+  display: block;
+  height: 375rpx;
+}
+
+.searchBanner image {
+  height: 376rpx;
+}
+
+.searchButton {
+  height: 45rpx;
+  margin: auto;
+  font-size: 40rpx;
+  line-height: 45rpx;
+  text-align: center;
+  background: none;
+  padding: 0px;
+}
+
+.kefuBttom {
+  text-align: center;
+}
+
+button::after {
+  border: none;
+  background: none;
+}
+
+.widget-goTop {
+  z-index: 500;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 200rpx;
+  text-align: center;
+  line-height: 80rpx;
+  width: 80rpx;
+  height: 80rpx;
+  font-size: 54rpx;
+  position: absolute;
+  bottom: 120rpx;
+  right: 50rpx;
+}
+
+.goods_sort {
+  z-index: 500;
+  background-color: white;
+  box-shadow: 2px 2px 5px #f0f0f0;
+}
+
+.reddot {
+  position: relative;
+  top: -80rpx;
+  right: -192rpx;
+  width: 30rpx;
+  height: 30rpx;
+  border-radius: 30rpx;
+  background: #f55253;
+  text-align: center;
+  vertical-align: middle;
+  color: white;
+  line-height: 30rpx;
+  font-size: 21rpx;
+}
+
+/*抛物线动画*/
+
+.good_box {
+  width: 30rpx;
+  height: 30rpx;
+  position: fixed;
+  border-radius: 50%;
+  overflow: hidden;
+  left: 50%;
+  top: 50%;
+  z-index: +99;
+  background: #f55253;
+}

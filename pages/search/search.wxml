@@ -1,0 +1,44 @@
+<include src="../common/topinput/topinput" />
+<!-- 商品分类 -->
+<view class="container">
+  <view style="width:100%;heigth:100%" class='content'>
+    <scroll-view scroll-y="true" bindscroll="scroll" scroll-top="{{scrollTop}}" style="position:absolute; top:65rpx; left:0; right:0;             bottom:0;">
+      <view class='searchBanner' wx:if="{{brandid=='newpeople'}}">
+        <image src="{{imgurl}}search/xr.jpg" style='width:100%;'></image>
+      </view>
+      <view wx:if="{{brandid=='goodGoods'}}">
+        <image src="{{imgurl}}search/by.jpg" style='width:100%;'></image>
+      </view>
+      <view hidden="{{iconsindex!==2}}">
+        <include src="/pages/common/scroll02/index" />
+      </view>
+      <view hidden="{{iconsindex!==1}}">
+        <include src="/pages/common/scroll03/index" />
+      </view>
+    </scroll-view>
+  </view>
+</view>
+<view class="good_box" hidden="{{hide_good_box}}" style="left: {{bus_x}}px; top: {{bus_y}}px;">
+</view>
+<view class='fudong'>
+  <view class="widget-goTop" wx:if="{{floorstatus}}" bindtap="goTop">
+    <view class="iconfont icon-huidingbu litt"></view>
+  </view>
+</view>
+<view class='bottomcar'>
+  <view class='Searchbottomcar-home home-home'>
+    <view>
+      <view class='iconfont icon-gouwuche img-bot' bindtap="gotocart"></view>
+      <view class="{{ tabItem.color}}" bindtap="gotocart">购物车</view>
+      <view hidden='{{CartCount==0}}' class='reddot'>{{CartCount}}</view>
+    </view>
+  </view>
+  <view class='Searchbottomcar-home'>
+    <view>
+      <button open-type="contact" class='searchButton'>
+        <view class='iconfont icon-kefuICON kefuBttom'></view>
+      </button>
+      <view class="{{ tabItem.color}}">客服</view>
+    </view>
+  </view>
+</view>

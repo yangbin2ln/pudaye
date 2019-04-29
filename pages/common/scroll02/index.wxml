@@ -1,0 +1,39 @@
+<!--排序-->
+<view class="menu_group">
+  <view wx:for="{{menu_group}}" wx:key="item" class="{{item.child_id==selected_childId ? 'menu_box_selected' : 'menu_box'}}" data-childid="{{item.child_id}}" bindtap="menuclick">{{item.child_name}}</view>
+  <view class="goods_sort">
+    <view wx:for="{{sort_group}}" class="sort_option" data-sort_index="{{index}}" bindtap="selectSort" wx:key="">
+      <view>
+        <text style="color:{{index!=sort_selected?'#a0a0a0':'#000'}}">{{item}}</text>
+        <image src="{{imgurl}}search/{{index!=sort_selected?'sort_icon.png':'sort_icon_active.png'}}"></image>
+      </view>
+      <view class="sort_option_bar" hidden="{{index!=sort_selected}}"></view>
+    </view>
+  </view>
+</view>
+
+<!--商品展示-->
+<view class="goods">
+  <view class="goods_show_box-2" wx:for="{{goods_message}}" wx:key="item">
+
+    <view class="goods_box" data-goodsid='{{item.goods_id}}' bindtap='goodboxclick'>
+      <view class="img_box">
+        <image mode='aspectFit' class="goods_image" src="{{goodsimgurl + item.goods_img}}"></image>
+      </view>
+      <view class="text_box">
+        <view class="goods_sell_number">
+          月销：{{item.sales_volume_base}}
+        </view>
+        <view wx:if="{{isLogin}}" class="goods_price">
+          ￥{{item.generalprice}}
+        </view>
+      </view>
+      <view class="goods_name">{{item.goods_name}}</view>
+      <view class='iconfont icon-gouwuche cartIcons' mode='aspectFit' data-id='{{item.goods_id}}' catchtap='touchOnGoods'></view>
+      <view class="goods_sellType" wx:if="{{item.sellType !== ''}}">{{item.sellType}}</view>
+    </view>
+  </view>
+</view>
+<view class="good_box" hidden="{{hide_good_box}}" style="left: {{bus_x}}px; top: {{bus_y}}px;">
+</view>
+<!-- <view class='h150'></view> -->

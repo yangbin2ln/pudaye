@@ -1,0 +1,15 @@
+/* input输入框 */
+
+.inputtop {
+  background-color: #fff;
+  position: fixed;
+  width: 100%;
+  z-index: 499;
+  font-size: 34rpx;
+  height: 68rpx;
+  top: 0;
+}
+
+.scroll {
+  margin-top: 65rpx;
+}
