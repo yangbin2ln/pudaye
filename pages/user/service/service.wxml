@@ -1,24 +1,15 @@
 
 <view class='serviceTop'>
-  <image src="{{imgurl}}all/serviceTop.jpg"></image>
+  <image src="/serviceTop.jpg"></image>
 </view>
 <view class='kfbox'>
   <view class='service'>
     <view>
-      <image src="{{imgurl}}all/service01.jpg"  bindtap='previewImage'></image>
+      <image src="/service01.jpg"  bindtap='previewImage'></image>
       <text class='f40'>客服群</text>
       <text class='f28'>(点击图片保存 识别图片二维码)</text>
     </view> 
-    <view>
-      <image src="{{imgurl}}all/service02.jpg"  bindtap='previewImage1'></image>
-      <text class='f40'>客服一</text>
-      <text class='f28'>(点击图片保存 识别图片二维码)</text>
-    </view>
-    <view>
-      <image src="{{imgurl}}all/service03.jpg"  bindtap='previewImage2'></image>
-      <text class='f40'>客服二</text>
-      <text class='f28'>(点击图片保存 识别图片二维码)</text>
-    </view>
+   
     <view>
       <image src="{{imgurl}}all/service04.jpg"  bindtap='previewImage3'></image>
       <text class='f40'>客服三</text>

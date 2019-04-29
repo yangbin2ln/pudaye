@@ -1,17 +1,24 @@
 <view>
   <view class="step_group">
-    <view class="step_item" wx:for="{{stepList}}" wx:for-item="index" wx:key="" style="{{index==orderAttr?'border-bottom:2px #f55253 solid;color:#f55253;':''}};" data-index='{{index}}' bindtap='tabClick'>{{stepList[index]}}</view>
+    <view class="step_item" wx:for="{{stepList}}" wx:for-item="index" wx:key=""
+    style="{{index==orderAttr?'border-bottom:2px #f55253 solid;color:#f55253;':''}};"
+    data-index='{{index}}' bindtap='tabClick'>{{stepList[index]}}</view>
   </view>
-  <view class='h100'></view>
-  <view wx:if="{{orderList.length == 1}}" class='centerText'>
-    <view>
-      <image class="cartImg" src="{{imgurl}}all/noorder.png"></image>
-    </view>
-    <text class='f30'>暂无</text>    
-  </view>
-  <view wx:if="{{orderList.length == 0}}" class='centerText'>
-    <view>
-     内容简介内容简介内容简介内容简介内容简介内容简介内容简介
+    <view class='content'>
+     <view class='title'>stepList[orderAttr]</view>
+        <view wx:if="{{orderAttr == 0}}" class='centerText'>
+          <view class='contentDetailed' >需全号报备，报备说明：需要提前一天微信前三后四报备，到案场填写带看单</view>
+        </view>
+        <view wx:if="{{orderAttr == 1}}" class='centerText'>
+          <view class='contentDetailed' >2需全号报备，报备说明：需要提前一天微信前三后四报备，到案场填写带看单</view>
+        </view>
+        <view wx:if="{{orderAttr == 2}}" class='centerText'>
+          <view class='contentDetailed' >3需全号报备，报备说明：需要提前一天微信前三后四报备，到案场填写带看单</view>
+        </view>
+        <view wx:if="{{orderAttr == 3}}" class='centerText'>
+          <view class='contentDetailed' >4需全号报备，报备说明：需要提前一天微信前三后四报备，到案场填写带看单</view>
+        </view>
     </view>   
-  </view>
+ 
+
 </view>

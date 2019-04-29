@@ -238,11 +238,15 @@ Page({
     app.getCartCount();
   },
   gotocart: function () {
-    wx.switchTab({
-      url: '../cart/cart'
+    wx.makePhoneCall({
+      phoneNumber: '1340000****' // 仅为示例，并非真实的电话号码
     })
   },
-
+  gotocart2: function () {
+    wx.makePhoneCall({
+      phoneNumber: '1516699****' // 仅为示例，并非真实的电话号码
+    })
+  },
   serviceSelection(e) {
     this.setData({
       goodsattr: e.currentTarget.dataset.attr
@@ -254,6 +258,10 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    //设置可转发
+    wx.showShareMenu({
+      withShareTicket: true
+    })
 
     this.setData({
       isLogin: app.isLogin()
@@ -332,5 +340,8 @@ Page({
         is_validated: app.data.logininfo.is_validated
       });
     }
+  },
+  viewImg: function(e){
+    getApp().viewImg(e);
   }
 })

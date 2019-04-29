@@ -42,7 +42,19 @@ Page({
   bindGetUserInfo: function(e) {
     var self = this;
     if (e.detail.userInfo) {
-      wx.login({
+		wx.showModal({
+		  title: '登录成功',
+		  content: '欢迎您，' + e.detail.userInfo.nickName,
+		  showCancel: false,
+		  success: function(){
+			wx.switchTab({
+				  url: '/pages/index/index'
+				});
+			wx.setStorageSync(app.data.logininfokey, e.detail.userInfo);
+		  }
+		})
+		 
+     /* wx.login({
         success: function(res) {
           if (res.code) {
             self.data.nickName = e.detail.userInfo.nickName;
@@ -66,7 +78,7 @@ Page({
             });
           }
         }
-      });
+      });*/
     } else {
       wx.showModal({
         title: "提示",

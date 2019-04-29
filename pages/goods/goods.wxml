@@ -1,53 +1,143 @@
 <scroll-view scroll-y="true" bindscroll="scroll" scroll-top="{{scrollTop}}" style="position:absolute; top:0; left:0; right:0; bottom:0;">
   <view class='con'>
     <view class='xq_banner'>
-      <image  class="goods_image" src="../../../images/xq_banner.jpg"></image>
+      <image class="goods_image goods_detail_big" data-preimg=".goods_detail_big" data-src="http://pudy.studysns.club/pudy/images/xq_banner.jpg" bindtap="viewImg" src="http://pudy.studysns.club/pudy/images/xq_banner.jpg"></image>
     </view>
     <view class='title'>华远枫悦</view>
-    <view class='introduce' >在租商铺2套</view>
+    <view class='introduce'>在租商铺2套</view>
     <view class='protag'>
-        <view>近地铁</view>
-        <view>热门商圈</view>
-        <view>品牌开发商</view>
-        <view>品牌物业</view>
-        <view>充足车位</view>
+      <view>近地铁</view>
+      <view>热门商圈</view>
+      <view>品牌开发商</view>
+      <view>品牌物业</view>
+      <view>充足车位</view>
     </view>
     <view class='jiage'>
-      <view><text>参考出租均价</text><text class='price'>155元/m²/月</text></view>
-      <view><text>面积</text><text>79-220m²</text></view>
+      <view>
+        <text>参考出租均价</text>
+        <text class='price'>155元/m²/月</text>
+      </view>
+      <view>
+        <text>面积</text>
+        <text>79-220m²</text>
+      </view>
     </view>
-</view>
+  </view>
 
- <view class='cont'>
-        <view>
-          <text>43000元/m²</text> 
-           <view class='protag'>
-              <view>在售</view>
-              <view>推荐</view>
-              <view>住宅</view>
-          </view>
-        </view>        
-        <view>
-          <view class='shopLabel'>开盘时间：2019-03-15</view>
-         <view class='shopLabel'>楼盘地址：荣兴路与五昆路交汇处></view>           
-        </view>        
+  <view class='module'>
+    <view class='xqprice'>43000
+      <text>元/m²</text> </view>
+    <view class='protag'>
+      <view>在售</view>
+      <view>推荐</view>
+      <view>住宅</view>
+    </view>
+
+    <view>
+      <view class='shopLabel'>开盘时间：
+        <text>2019-03-15</text> </view>
+      <view class='shopLabel'>楼盘地址：
+        <navigator url="../map/map?longitude=108.872665&latitude=34.22416" hover-class="navigator-hover">荣兴路与五昆路交汇处></navigator>
       </view>
-      <view class='module' >
-        <view class='title'>导客规则<navigator url="../user/order/order" hover-class="navigator-hover"> 查看更多</navigator></view>        
-        <text>可隐号报备，隐号格式：前3后4，如：139****1234</text>
-      </view>
+    </view>
+  </view>
+  <view class='module'>
+    <view class='more'>
+      <navigator url="../user/order/order">查看更多</navigator>
+    </view>
+    <view class='Mtitle'>导客规则
+    </view>
+    <text>可隐号报备，隐号格式：前3后4，如：139****1234</text>
+  </view>
+  <view class='module'>
+    <view class='Mtitle'>主力户型</view>
+    <scroll-view scroll-x="true" class='houseBox'>
+
       <view>
-        <view class='title'>主力户型</view>
-        <text>户型一</text>
+      <view class='house scroll-view-item'>
+        <view class='houseImg'>
+          <image class="goods_image hx_detail_big" data-preimg=".hx_detail_big" data-src="http://pudy.studysns.club/pudy/images/hx01.jpg" bindtap="viewImg" src="http://pudy.studysns.club/pudy/images/hx01.jpg"></image>
+        </view>
+        <view class='shibie'>3室2厅1卫 88㎡
+          <text>在售</text>
+        </view>
+        <view class='hx'>A户型（住宅）
+          <view class='hxPrice'>378万起</view>
+        </view>
       </view>
-      <view>
-        <view class='title'>楼盘信息</view>
-        <text>开发商：上海</text>
+
+      <view class='house scroll-view-item'>
+        <view class='houseImg'>
+          <image class="goods_image hx_detail_big" data-preimg=".hx_detail_big" data-src="http://pudy.studysns.club/pudy/images/hx01.jpg" bindtap="viewImg" src="http://pudy.studysns.club/pudy/images/hx01.jpg"></image>
+        </view>
+        <view class='shibie'>2室1厅1卫 92㎡
+          <text>在售</text>
+        </view>
+        <view class='hx'>A户型（住宅）
+          <view class='hxPrice'>108万起</view>
+        </view>
       </view>
-    <view class='iconfont icon-kefuICON kefu' bindtap="icons" hidden="{{!formtype}}"></view>
-    <!-- 底部输入框及文字 -->
-    <view style="height:50rpx;"></view>
-  
+
+      <view class='house scroll-view-item'>
+        <view class='houseImg'>
+          <image class="goods_image hx_detail_big" data-preimg=".hx_detail_big" data-src="http://pudy.studysns.club/pudy/images/hx01.jpg" bindtap="viewImg" src="http://pudy.studysns.club/pudy/images/hx01.jpg"></image>
+        </view>
+        <view class='shibie'>4室3厅2卫 288㎡
+          <text>在售</text>
+        </view>
+        <view class='hx'>A户型（住宅）
+          <view class='hxPrice'>378万起</view>
+        </view>
+      </view>
+
+      <view class='house scroll-view-item'>
+        <view class='houseImg'>
+          <image class="goods_image hx_detail_big" data-preimg=".hx_detail_big" data-src="http://pudy.studysns.club/pudy/images/hx01.jpg" bindtap="viewImg" src="http://pudy.studysns.club/pudy/images/hx01.jpg"></image>
+        </view>
+        <view class='shibie'>3室2厅1卫 125㎡
+          <text>在售</text>
+        </view>
+        <view class='hx'>A2户型（住宅）
+          <view class='hxPrice'>150万起</view>
+        </view>
+      </view>
+      </view>
+    </scroll-view>
+  </view>
+
+
+  <view class='module'>
+    <view class='more'>
+      <navigator url="../user/dormitory/dormitory">查看更多</navigator>
+    </view>
+
+    <view class='title'>楼盘信息 </view>
+    <view class='d2'>
+      <view>开发商
+        <text>上海</text>
+      </view>
+      <view>车位比
+        <text>1:1.23</text>
+      </view>
+    </view>
+    <view class='d2'>
+      <view>开发商
+        <text>上海</text>
+      </view>
+      <view>车位比
+        <text>1:1.23</text>
+      </view>
+    </view>
+    <view class='d1'>
+      <view>交通配套
+        <text>周边公交信息：沪松线，16路，22路</text>
+      </view>
+    </view>
+  </view>
+  <view class='iconfont icon-kefuICON kefu' bindtap="icons" hidden="{{!formtype}}"></view>
+  <!-- 底部输入框及文字 -->
+  <view style="height:100rpx;"></view>
+
   <!-- 详情底部 -->
   <view class='bottomcar'>
     <view class='bottomcar-home home-home'>
@@ -66,8 +156,8 @@
         <view class='iconfont icon-gouwuche img-bot' bindtap="gotocart"></view>
         <view class="{{ tabItem.color}}" bindtap="gotocart">项目经理</view>
       </view>
-    </view>    
-    <view class='bottomcar-buy now-in' bindtap='buynow'>
+    </view>
+    <view class='bottomcar-buy now-in' bindtap='gotocart2'>
       <text>咨询经纪人</text>
     </view>
   </view>

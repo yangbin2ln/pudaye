@@ -40,7 +40,13 @@
 .introduce{ 
   font-size: 24rpx; color: #999; padding: 10rpx;
   }
-.jiage view{ width: 375rpx; display: inline-block; text-align: center;font-size: 28rpx; line-height: 40rpx;}
+.jiage{
+  border-top: 1px solid #f0f0f0;
+  padding: 10rpx;
+  margin-top:20rpx;
+}
+.jiage view{ width: 365rpx; display: inline-block; text-align: center;font-size: 28rpx; line-height: 60rpx;
+padding-top: 15rpx; padding-bottom: 15rpx;}
 .jiage view text{
   display: block;
 }
@@ -49,6 +55,54 @@
   font-size: 36rpx;
 
 }
+.module{background: #fff; margin-top: 20rpx; padding: 20rpx;}
+.module .xqprice{ font-size: 60rpx; color: #f00; }
+.module .xqprice text{ font-size: 24rpx;}
+.module .more{ font-size: 24rpx; float: right; position: absolute;right: 20rpx;}
+.module .Mtitle{ 
+   text-align: left;
+  font-size: 38rpx;
+  display: flex;
+  flex-direction: column;
+  line-height: 55rpx;
+  font-weight: bold;
+  word-spacing: 10rpx;
+  background-color: white;
+  padding-bottom: 25rpx;
+  -webkit-box-orient: vertical;
+  padding: 0rpx;}
+.houseBox{ 
+  display: flex;
+  white-space: nowrap;
+}
+.hxPrice{float: right; color: #f00;}
+.d2 view{
+  width: 350rpx;
+  display: inline-block;
+  color: #999;
+  line-height: 50rpx;
+}
+.d2 view text{
+  color: #000;
+}
+.d1{color: #999;line-height: 50rpx;}
+.d1 text{color: #000;}
+ .house{
+   padding-top: 30rpx;
+   height: 350rpx;
+   width: 327rpx;
+   display: inline-block;
+ }  
+
+ .houseImg image{ width: 307rpx; height: 220rpx; border: 1px solid #f0f0f0;}
+ .hx{ font-size: 24rpx; color: #999;
+   line-height: 60rpx;}
+ .shibie{ font-weight: bold;}
+ .house  .shibie{
+   font-size: 32rpx;
+   line-height: 60rpx;
+ }
+ .house .shibie text{ font-size: 24rpx;float: right; color:#999;}
 .title {
   text-align: left;
   font-size: 38rpx;
@@ -57,7 +111,6 @@
   line-height: 55rpx;
   font-weight: bold;
   word-spacing: 10rpx;
-  border-top: 3rpx solid #f8f8f8;
   background-color: white;
   padding-bottom: 25rpx;
   padding: 26rpx;
@@ -572,11 +625,10 @@
 }
 
 .shopLabel {
-  text-align:justify;
-  width:200rpx;
-  display:inline-block;
-  vertical-align:top;
+  color:#999;
+line-height:50rpx;
 }
+.shopLabel navigator { display: inline-block; color: #797a96;}
 .shopline{
   word-spacing:10rpx;
   background-color:white;

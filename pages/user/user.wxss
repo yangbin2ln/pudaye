@@ -4,36 +4,14 @@ page {
   font-size: 28rpx;
 }
 
-#littlegroup {
-  display: flex;
-  flex-direction: column;
-  width: 25%;
-  text-align: center;
-}
-
-.tem5 {
-  display: flex;
-  flex-direction: row;
-  background: #fff;
-  padding-top: 10rpx;
-}
-
-.tem05-imgb {
-  width: 55rpx;
-  height: 55rpx;
-  margin: 10rpx auto;
-  display: flex;
-  font-size: 50rpx;
-  color: #f55253;
-}
 
 .tem04-imgb {
   width: 55rpx;
   height: 55rpx;
   margin: 10rpx auto;
   display: flex;
-  font-size: 50rpx;
-  color: #f55253;
+  font-size: 45rpx;
+  color: #0090d8;
   margin-bottom: 0rpx;
 }
 
@@ -58,7 +36,7 @@ page {
 }
 
 .userMenu_box {
-  width: 165rpx;
+  width:230rpx;
   margin: 10rpx;
   text-align: center;
   justify-content: center;

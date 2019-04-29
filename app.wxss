@@ -1360,7 +1360,7 @@ strong {
   font-size: 22rpx;
   color: #666;
   display: inline-block;
-  width: 150rpx;
+  width: 120rpx;
 }
 
 .goods_price {
@@ -1403,7 +1403,7 @@ font-size:28rpx;
   height: 500rpx;
   width: 750rpx;
 }
-.protag view{ background: #f2f6fe; border-radius: 4rpx; font-size: 20rpx; text-align: center; color: #a9aaaf; display: inline-block; margin: 5rpx; padding:0rpx 15rpx; }
+.protag view{ background: #f2f6fe; border-radius: 4rpx; font-size: 20rpx; text-align: center; color: #000; display: inline-block; margin: 5rpx; padding:0rpx 15rpx; }
 .con{ background: #fff;}
 /******************提交按钮******************/
 
@@ -1698,7 +1698,7 @@ padding-bottom:25rpx;
 }
 
 .bottomcar-buy {
-  width: 30%;
+  width: 60%;
   font-size: 30rpx;
   line-height: 80rpx;
   color: white;
@@ -1979,7 +1979,7 @@ button[class="con_listbox"]::after {
 
 .centerText {
   text-align: center;
-  padding-top: 200rpx;
+  padding-top: 100rpx;
 }
 
 .remarks {

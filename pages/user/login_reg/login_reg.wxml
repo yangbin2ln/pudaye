@@ -2,7 +2,7 @@
   <view class="success_info">
   </view>
   <view class="loginImg">
-    <image src="../../../images/all/logo.png"></image>
+    <image src="http://pudy.studysns.club/pudy/images/logo.png"></image>
     <!-- 欢迎登录进入白幡上町分销 -->
   </view>
   <view class='boxWhite'>
