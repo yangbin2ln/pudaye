@@ -102,7 +102,7 @@ App({
   },
   WxPay: function(orderCode, formId) {
     wx.navigateToMiniProgram({
-      appId: 'wx0c70d87410d11d43',
+      appId: 'wx1ec0ed192980dc5b',
       path: '/pages/pay/pay?type=1&orderCode=' + orderCode + "&formId=" + formId,
       envVersion: "trial",
       success(res) {
@@ -154,7 +154,7 @@ App({
   },
   WxPayShippping: function(ShippingNO, formId) {
     wx.navigateToMiniProgram({
-      appId: 'wx0c70d87410d11d43',
+      appId: 'wx1ec0ed192980dc5b',
       path: '/pages/pay/pay?type=1&orderCode=' + orderCode + "&formId=" + formId,
       envVersion: "trial",
       success(res) {

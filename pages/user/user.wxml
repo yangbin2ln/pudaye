@@ -15,14 +15,8 @@
             <text>登录</text>
           </navigator>
         </view>
-        <view wx:else class='state'>
-          <view wx:if="{{!is_validated}}">
-            <text>状态：未激活</text>
-            <text>※请联系客服激活并重新登录!</text>
-          </view>
-          <view wx:else>
+        <view wx:else class='state'>        
             <text>状态：已激活</text>
-          </view>
         </view>
       </view>
     </view>
@@ -48,11 +42,16 @@
         <view class='iconfont icon-bangzhudeng tem04-imgb'></view>
         <text>使用帮助</text> </navigator>
     </view> 
-    <view class='userMenu_box' bindtap='logout'>
+	
+    <view wx:if="{{!!isLogin}}" class='userMenu_box' bindtap='logout'>
       <view class='iconfont icon-tongyong-tuichudenglutubiao tem04-imgb'></view>
       <text>退出登录</text>
     </view>
-
+	<view wx:else class='userMenu_box'>
+      <navigator url="service/service">
+        <view class='iconfont icon-bangzhudeng tem04-imgb'></view>
+        <text>更多功能</text> </navigator>
+    </view>
   </view>
   
 </view>
