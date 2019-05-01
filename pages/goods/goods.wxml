@@ -3,23 +3,20 @@
     <view class='xq_banner'>
       <image class="goods_image goods_detail_big" data-preimg=".goods_detail_big" data-src="http://pudy.studysns.club/pudy/images/xq_banner.jpg" bindtap="viewImg" src="http://pudy.studysns.club/pudy/images/xq_banner.jpg"></image>
     </view>
-    <view class='title'>华远枫悦</view>
+    <view class='title'>世纪优盘</view>
     <view class='introduce'>在租商铺2套</view>
     <view class='protag'>
       <view>近地铁</view>
-      <view>热门商圈</view>
-      <view>品牌开发商</view>
-      <view>品牌物业</view>
-      <view>充足车位</view>
+      <view>教育资源</view>
     </view>
     <view class='jiage'>
       <view>
         <text>参考出租均价</text>
-        <text class='price'>155元/m²/月</text>
+        <text class='price'>9800元/m²/月</text>
       </view>
       <view>
         <text>面积</text>
-        <text>79-220m²</text>
+        <text>110-180m²</text>
       </view>
     </view>
   </view>
@@ -37,7 +34,7 @@
       <view class='shopLabel'>开盘时间：
         <text>2019-03-15</text> </view>
       <view class='shopLabel'>楼盘地址：
-        <navigator url="../map/map?longitude=108.872665&latitude=34.22416" hover-class="navigator-hover">荣兴路与五昆路交汇处></navigator>
+        <navigator url="../map/map?longitude=108.74641&latitude=34.326032" hover-class="navigator-hover">陕西省咸阳市秦都区世纪大道中段中医药大学对面></navigator>
       </view>
     </view>
   </view>
@@ -142,13 +139,7 @@
   <view class='bottomcar'>
     <view class='bottomcar-home home-home'>
       <view>
-        <view class='save' wx:if="{{collect==0}}">
-          <view class='iconfont icon-guanzhu save' data-id="{{goodsid}}" bindtap='collect'></view>
-        </view>
-        <view class='save' wx:else>
-          <view class='iconfont icon-shoucang save' data-id="{{goodsid}}" bindtap='collect'></view>
-        </view>
-        <view class="{{ tabItem.color}}" data-id="{{goodsid}}" bindtap='collect'>分享</view>
+        <button open-type="share">转发</button>
       </view>
     </view>
     <view class='bottomcar-home'>

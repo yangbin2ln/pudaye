@@ -116,7 +116,12 @@ Page({
       scrollTop: 0
     });
   },
- 
+  onLoad: function (options) {
+    //设置可转发
+    wx.showShareMenu({
+      withShareTicket: true
+    })
+  },
  
   // startPullDownRefresh() {
   //   // wx.stopPullDownRefresh()

@@ -36,11 +36,16 @@
         <view class='iconfont icon-bangzhudeng tem04-imgb'></view>
         <text>使用帮助</text> </navigator>
     </view> 
-    <view class='userMenu_box' bindtap='logout'>
+	
+    <view wx:if="{{!!isLogin}}" class='userMenu_box' bindtap='logout'>
       <view class='iconfont icon-tongyong-tuichudenglutubiao tem04-imgb'></view>
       <text>退出登录</text>
     </view>
-
+	<view wx:else class='userMenu_box'>
+      <navigator url="service/service">
+        <view class='iconfont icon-bangzhudeng tem04-imgb'></view>
+        <text>更多功能</text> </navigator>
+    </view>
   </view>
   
 </view>
