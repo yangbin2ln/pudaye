@@ -73,10 +73,10 @@ function request(url, data, doSuccess, method, showLoading,doFail, doComplete) {
     },
     success: function(res) {
       if (typeof doSuccess == "function") {
-        if (res.data.code == 1) {
+        if (!res.data.success) {
           showModal(res.data.message);
         } else {
-          doSuccess(res);
+          doSuccess(res.data);
         }
       }
     },

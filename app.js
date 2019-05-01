@@ -2,6 +2,8 @@
 var util = require('/utils/util.js');
 App({
   data: {
+    apiurl: 'http://pudy.studysns.club',
+    fileurl: 'http://pudy.studysns.club/pudy',
     projectName: "铺大爷",
     logininfokey: "logininfo",
     logininfo: {

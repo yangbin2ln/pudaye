@@ -2,7 +2,21 @@
   <include src="../common/topinput/topinput" />
   <!-- 轮播图 -->
   <view class='banner' style=''>
-    <image  class="goods_image" src="http://pudy.studysns.club/pudy/images/banner.jpg"></image>
+    <swiper
+          indicator-dots="true"
+          autoplay="true"
+          style='height:272rpx'
+          indicator-active-color='rgba(239, 20, 20, 0.91)'
+        >
+            <swiper-item>
+              <image height="500" class="goods_image2"
+              src="http://pudy.studysns.club/pudy/images/banner.jpg" />
+            </swiper-item>
+            <swiper-item>
+              <image height="500" class="goods_image2"
+              src="http://pudy.studysns.club/pudy/images/banner.jpg" />
+            </swiper-item>
+      </swiper>
   </view>
   <text class='tit'>帮我找铺</text>    
   <view>
@@ -12,15 +26,15 @@
 
         <view wx:for="{{goodsList}}" wx:for-item="obj" wx:key="id" class="goods_show_box-3">
           <view class="goods_box">
-          <navigator url="../goods/goods" hover-class="navigator-hover">         
+          <navigator url="../goods/goods?id={{obj.id}}" hover-class="navigator-hover">         
             <view class="img_box">
               <image  class="goods_image" src="http://pudy.studysns.club/pudy/images/proImg.jpg"></image>
             </view>
             <view class="text_box">
-              <view class="goods_name">{{obj.name}}</view>              
+              <view class="goods_name">{{obj.dormitoryName}}</view>              
               <view class="goods_desc">
-                <view class="goods_sell_number">{{obj.area}}㎡</view>
-                <view>均价<view class="goods_price ">￥{{obj.avePrice}}元</view>/㎡/月</view>
+                <view class="goods_sell_number">{{obj.minArea}}-{{obj.maxArea}}㎡</view>
+                <view>均价<view class="goods_price ">￥{{obj.sellPrice}}元</view>/㎡/月</view>
               </view>
               <view class='protag'>
                 <view wx:for="{{obj.labelArr}}" wx:for-item="label" wx:key="id" >{{label}}</view>

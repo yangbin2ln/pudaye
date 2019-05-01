@@ -1,10 +1,26 @@
 <scroll-view scroll-y="true" bindscroll="scroll" scroll-top="{{scrollTop}}" style="position:absolute; top:0; left:0; right:0; bottom:0;">
   <view class='con'>
-    <view class='xq_banner'>
-      <image class="goods_image goods_detail_big" data-preimg=".goods_detail_big" data-src="http://pudy.studysns.club/pudy/images/xq_banner.jpg" bindtap="viewImg" src="http://pudy.studysns.club/pudy/images/xq_banner.jpg"></image>
+      <view class='xq_banner'>
+        <swiper
+          indicator-dots="true"
+          autoplay="true"
+          class='xq_banner'
+        >
+            <swiper-item>
+              <image height="500" class="goods_image2 goods_detail_big" data-preimg=".goods_detail_big" 
+              data-src="http://pudy.studysns.club/pudy/images/xq_banner.jpg" bindtap="viewImg" 
+              src="http://pudy.studysns.club/pudy/images/xq_banner.jpg" />
+            </swiper-item>
+            <swiper-item>
+              <image height="500" class="goods_image2 goods_detail_big" data-preimg=".goods_detail_big" 
+              data-src="http://pudy.studysns.club/pudy/images/xq_banner.jpg" bindtap="viewImg" 
+              src="http://pudy.studysns.club/pudy/images/xq_banner.jpg" />
+            </swiper-item>
+      </swiper>
     </view>
-    <view class='title'>世纪优盘</view>
-    <view class='introduce'>在租商铺2套</view>
+
+    <view class='title'>{{dormitoryName}}</view>
+    <view class='introduce'>在租商铺{{sellingNumber}}套</view>
     <view class='protag'>
       <view>近地铁</view>
       <view>教育资源</view>
@@ -12,17 +28,17 @@
     <view class='jiage'>
       <view>
         <text>参考出租均价</text>
-        <text class='price'>9800元/m²/月</text>
+        <text class='price'>{{hirePrice}}元/m²/月</text>
       </view>
       <view>
         <text>面积</text>
-        <text>110-180m²</text>
+        <text>{{minArea}}-{{maxArea}}m²</text>
       </view>
     </view>
   </view>
 
   <view class='module'>
-    <view class='xqprice'>43000
+    <view class='xqprice'>{{sellPrice}}
       <text>元/m²</text> </view>
     <view class='protag'>
       <view>在售</view>
@@ -32,9 +48,11 @@
 
     <view>
       <view class='shopLabel'>开盘时间：
-        <text>2019-03-15</text> </view>
+        <text>{{openDate}}</text> </view>
       <view class='shopLabel'>楼盘地址：
-        <navigator url="../map/map?longitude=108.74641&latitude=34.326032" hover-class="navigator-hover">陕西省咸阳市秦都区世纪大道中段中医药大学对面></navigator>
+        <navigator url="../map/map?longitude={{lng}}&latitude={{lat}}&name={{dormitoryName}}" hover-class="navigator-hover">
+        {{address}}
+        </navigator>
       </view>
     </view>
   </view>
@@ -44,7 +62,7 @@
     </view>
     <view class='Mtitle'>导客规则
     </view>
-    <text>可隐号报备，隐号格式：前3后4，如：139****1234</text>
+    <text>{{ruleBb}}</text>
   </view>
   <view class='module'>
     <view class='Mtitle'>主力户型</view>
@@ -111,18 +129,18 @@
     <view class='title'>楼盘信息 </view>
     <view class='d2'>
       <view>开发商
-        <text>上海</text>
+        <text>{{developeBrand}}</text>
       </view>
-      <view>车位比
-        <text>1:1.23</text>
+      <view>容积率
+        <text>{{plotRadio}}</text>
       </view>
     </view>
     <view class='d2'>
-      <view>开发商
-        <text>上海</text>
+      <view>物业
+        <text>{{wuyeCompany}}</text>
       </view>
       <view>车位比
-        <text>1:1.23</text>
+        <text>{{carRate}}</text>
       </view>
     </view>
     <view class='d1'>

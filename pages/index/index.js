@@ -6,31 +6,8 @@ Page({
    * 页面的初始数据
    */
   data: {
-    goodsList: [{
-      name: '世纪优盘',
-      area: '110-180',
-      avePrice: 9800,
-      labelArr: ['近地铁', '教育资源'],
-      address: '世纪大道'
-    },{
-      name: '鸿基新城',
-      area: '85-220',
-      avePrice: 13000,
-      labelArr: ['近地铁', '教育资源', '配套成熟'],
-      address: '雁塔区科技四路'
-    },{
-      name: '大润城',
-      area: '85-180',
-      avePrice: 14000,
-      labelArr: ['近地铁', '沣东'],
-      address: '沣东新城'
-    },{
-      name: '金科世纪城',
-      area: '85-220',
-      avePrice: 11000,
-      labelArr: ['交通便利', '品牌开发商'],
-      address: '沣西新城'
-    }],
+    goodsList: [],
+    dormitoryName: '',
     imgUrls: [],
     floorstatus: false,
     goodsimgurl: app.data.goodsimgurl,
@@ -108,7 +85,7 @@ Page({
     if (this.data.keywords == undefined) {
       this.data.keywords = "";
     }
-    this.getGoodsInfo(true);
+    this.getGoodsInfo(true); 
   },
   
   goTop: function(e) {
@@ -122,6 +99,19 @@ Page({
       withShareTicket: true
     })
   },
+  onShow: function(){
+    let self = this;
+    util.request(
+      app.data.apiurl + '/web/dormitoryinfo/loadAllGrid', {
+        dormitoryName: self.data.dormitoryName,
+      },
+      function(res) {
+         self.setData({
+          goodsList: res.data
+         });
+      }
+    );
+  }
  
   // startPullDownRefresh() {
   //   // wx.stopPullDownRefresh()
