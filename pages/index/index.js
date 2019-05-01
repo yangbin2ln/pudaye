@@ -108,7 +108,7 @@ Page({
     if (this.data.keywords == undefined) {
       this.data.keywords = "";
     }
-    this.getGoodsInfo(true);
+    this.getGoodsInfo(true); 
   },
   
   goTop: function(e) {

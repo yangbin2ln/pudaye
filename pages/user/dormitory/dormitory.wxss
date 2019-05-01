@@ -1,0 +1,7 @@
+.content{text-align: left; background: #fff;padding: 20rpx;}
+.content .title{
+  font-size: 34rpx;
+  line-height: 50rpx;
+  font-weight: bold;
+}
+.contentDetailed{ font-size:28rpx; }
