@@ -46,19 +46,5 @@ Page({
     this.setData({
       isLogin: app.isLogin()
     });
-    if (this.data.isLogin) {
-      var self = this;
-      util.request(app.data.apiurl + 'api/Order/GetOrderTypeCount', {
-        user_id: app.data.logininfo.user_id
-      }, function(e) {
-        self.setData({
-          noPayCount: e.data.noPayCount,
-          noSendgoodCount: e.data.noSendgoodCount,
-          noReceiveCount: e.data.noReceiveCount,
-          is_validated: e.data.isvalidated,
-          user_card: e.data.usercard
-        });
-      })
-    }
   },
 })

@@ -48,37 +48,12 @@ Page({
 		  showCancel: false,
 		  success: function(){
 			wx.switchTab({
-				  url: '/pages/index/index'
+				  url: '/pages/user/user'
 				});
 			wx.setStorageSync(app.data.logininfokey, e.detail.userInfo);
 		  }
 		})
-		 
-     /* wx.login({
-        success: function(res) {
-          if (res.code) {
-            self.data.nickName = e.detail.userInfo.nickName;
-            util.request(app.data.apiurl + "api/Index/WeixinLogin", {
-              code: res.code,
-              nickName: e.detail.userInfo.nickName
-            }, function(e) {
-              if (e.data.list.length > 0) {
-                self.LoginOk(e);
-              } else {
-                self.showMobileDialog();
-                // self.setData({
-                //   currentStep: 1
-                // });
 
-                self.GetDataDictionary('03');
-                self.GetDataDictionary('04');
-                self.GetDataDictionary('05');
-                self.GetDataDictionary('06');
-              }
-            });
-          }
-        }
-      });*/
     } else {
       wx.showModal({
         title: "提示",

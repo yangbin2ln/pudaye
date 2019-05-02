@@ -7,16 +7,15 @@
     <view class='content'>
      <view class='title'>stepList[orderAttr]</view>
         <view wx:if="{{orderAttr == 0}}" class='centerText'>
-          <view class='contentDetailed' >需全号报备，报备说明：需要提前一天微信前三后四报备，到案场填写带看单</view>
+          <view class='contentDetailed' >
+            楼盘详情
+          </view>
         </view>
         <view wx:if="{{orderAttr == 1}}" class='centerText'>
-          <view class='contentDetailed' >2需全号报备，报备说明：需要提前一天微信前三后四报备，到案场填写带看单</view>
+          <view class='contentDetailed' >{{wuyeType}}</view>
         </view>
         <view wx:if="{{orderAttr == 2}}" class='centerText'>
-          <view class='contentDetailed' >3需全号报备，报备说明：需要提前一天微信前三后四报备，到案场填写带看单</view>
-        </view>
-        <view wx:if="{{orderAttr == 3}}" class='centerText'>
-          <view class='contentDetailed' >4需全号报备，报备说明：需要提前一天微信前三后四报备，到案场填写带看单</view>
+          <view class='contentDetailed' >{{attachInfo}}</view>
         </view>
     </view>   
  

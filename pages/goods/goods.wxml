@@ -6,15 +6,10 @@
           autoplay="true"
           class='xq_banner'
         >
-            <swiper-item>
+            <swiper-item wx:for="{{lunboImgsArr}}" wx:for-item="obj" wx:key="id">
               <image height="500" class="goods_image2 goods_detail_big" data-preimg=".goods_detail_big" 
-              data-src="http://pudy.studysns.club/pudy/images/xq_banner.jpg" bindtap="viewImg" 
-              src="http://pudy.studysns.club/pudy/images/xq_banner.jpg" />
-            </swiper-item>
-            <swiper-item>
-              <image height="500" class="goods_image2 goods_detail_big" data-preimg=".goods_detail_big" 
-              data-src="http://pudy.studysns.club/pudy/images/xq_banner.jpg" bindtap="viewImg" 
-              src="http://pudy.studysns.club/pudy/images/xq_banner.jpg" />
+              data-src="{{fileurl + obj.filePath}}" bindtap="viewImg" 
+              src="{{fileurl + obj.filePath}}" />
             </swiper-item>
       </swiper>
     </view>
@@ -69,51 +64,16 @@
     <scroll-view scroll-x="true" class='houseBox'>
 
       <view>
-      <view class='house scroll-view-item'>
+      <view class='house scroll-view-item'  wx:for="{{huxingImgsArr}}" wx:for-item="obj" wx:key="id">
         <view class='houseImg'>
-          <image class="goods_image hx_detail_big" data-preimg=".hx_detail_big" data-src="http://pudy.studysns.club/pudy/images/hx01.jpg" bindtap="viewImg" src="http://pudy.studysns.club/pudy/images/hx01.jpg"></image>
+          <image class="goods_image hx_detail_big" data-preimg=".hx_detail_big" data-src="{{fileurl + obj.filePath}}"
+           bindtap="viewImg" src="{{fileurl + obj.filePath}}"></image>
         </view>
         <view class='shibie'>3室2厅1卫 88㎡
           <text>在售</text>
         </view>
         <view class='hx'>A户型（住宅）
           <view class='hxPrice'>378万起</view>
-        </view>
-      </view>
-
-      <view class='house scroll-view-item'>
-        <view class='houseImg'>
-          <image class="goods_image hx_detail_big" data-preimg=".hx_detail_big" data-src="http://pudy.studysns.club/pudy/images/hx01.jpg" bindtap="viewImg" src="http://pudy.studysns.club/pudy/images/hx01.jpg"></image>
-        </view>
-        <view class='shibie'>2室1厅1卫 92㎡
-          <text>在售</text>
-        </view>
-        <view class='hx'>A户型（住宅）
-          <view class='hxPrice'>108万起</view>
-        </view>
-      </view>
-
-      <view class='house scroll-view-item'>
-        <view class='houseImg'>
-          <image class="goods_image hx_detail_big" data-preimg=".hx_detail_big" data-src="http://pudy.studysns.club/pudy/images/hx01.jpg" bindtap="viewImg" src="http://pudy.studysns.club/pudy/images/hx01.jpg"></image>
-        </view>
-        <view class='shibie'>4室3厅2卫 288㎡
-          <text>在售</text>
-        </view>
-        <view class='hx'>A户型（住宅）
-          <view class='hxPrice'>378万起</view>
-        </view>
-      </view>
-
-      <view class='house scroll-view-item'>
-        <view class='houseImg'>
-          <image class="goods_image hx_detail_big" data-preimg=".hx_detail_big" data-src="http://pudy.studysns.club/pudy/images/hx01.jpg" bindtap="viewImg" src="http://pudy.studysns.club/pudy/images/hx01.jpg"></image>
-        </view>
-        <view class='shibie'>3室2厅1卫 125㎡
-          <text>在售</text>
-        </view>
-        <view class='hx'>A2户型（住宅）
-          <view class='hxPrice'>150万起</view>
         </view>
       </view>
       </view>

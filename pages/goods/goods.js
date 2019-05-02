@@ -5,7 +5,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-     
+     fileurl: getApp().data.fileurl
   },
   
   goTop: function (e) {
@@ -53,11 +53,26 @@ Page({
         id: options.id,
       },
       function(res) {
+        let lunboImgs = res.data.lunboImgs;
+        let huxingImgs = res.data.huxingImgs;
+        if(lunboImgs){
+          lunboImgs = JSON.parse(lunboImgs);
+        }
+        if(huxingImgs){
+          huxingImgs = JSON.parse(huxingImgs);
+        }
          self.setData({
-          ...res.data
+          ...res.data,
+          lunboImgsArr: lunboImgs,
+          huxingImgsArr: huxingImgs,
          });
+
+         wx.setNavigationBarTitle({
+          title: self.data.dormitoryName
+        })
       }
     );
+
   },
   
   viewImg: function(e){
