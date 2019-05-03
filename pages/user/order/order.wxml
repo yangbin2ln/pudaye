@@ -5,7 +5,7 @@
     data-index='{{index}}' bindtap='tabClick'>{{stepList[index]}}</view>
   </view>
     <view class='content'>
-     <view class='title'>stepList[orderAttr]</view>
+     <view class='Mtitle'>stepList[orderAttr]</view>
         <view wx:if="{{orderAttr == 0}}" class='centerText'>
           <view class='contentDetailed' >{{ruleBb}}</view>
         </view>

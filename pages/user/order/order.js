@@ -16,9 +16,11 @@ Page({
    */
   onLoad: function(options) {
     let preData = window.getCurrentPages()[window.getCurrentPages().length-2].data;
-    this.setData({
-      ...preData
-    });
+    let data = {};
+    for(key in preData){
+      data[key] = preData[key]
+    }
+    this.setData(data);
     wx.setNavigationBarTitle({
       title: this.data.dormitoryName
     })

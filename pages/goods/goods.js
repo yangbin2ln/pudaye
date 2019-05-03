@@ -61,11 +61,15 @@ Page({
         if(huxingImgs){
           huxingImgs = JSON.parse(huxingImgs);
         }
-         self.setData({
-          ...res.data,
+        let data = {
           lunboImgsArr: lunboImgs,
           huxingImgsArr: huxingImgs,
-         });
+          labelNamesArr: res.data.labelNames.split(',')
+         }
+         for(key in res.data){
+           data[key] = res.data[key];
+         }
+         self.setData(data);
 
          wx.setNavigationBarTitle({
           title: self.data.dormitoryName

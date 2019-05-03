@@ -28,7 +28,7 @@
           <view class="goods_box">
           <navigator url="../goods/goods?id={{obj.id}}" hover-class="navigator-hover">         
             <view class="img_box">
-              <image  class="goods_image" src="http://pudy.studysns.club/pudy/images/proImg.jpg"></image>
+              <image  class="goods_image" src="{{fileurl + obj.smallImgSin}}"></image>
             </view>
             <view class="text_box">
               <view class="goods_name">{{obj.dormitoryName}}</view>              
@@ -37,7 +37,7 @@
                 <view>均价<view class="goods_price ">￥{{obj.sellPrice}}元</view>/㎡/月</view>
               </view>
               <view class='protag'>
-                <view wx:for="{{obj.labelArr}}" wx:for-item="label" wx:key="id" >{{label}}</view>
+                <view wx:for="{{obj.labelNamesArr}}" wx:for-item="label" wx:key="id" >{{label}}</view>
               </view>
               <view class='addr'>{{obj.address}}</view>              
             </view>
