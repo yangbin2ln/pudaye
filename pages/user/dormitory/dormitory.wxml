@@ -8,14 +8,45 @@
      <view class='title'>stepList[orderAttr]</view>
         <view wx:if="{{orderAttr == 0}}" class='centerText'>
           <view class='contentDetailed' >
-            楼盘详情
+            <view><text>开盘时间</text>2019-12-01</view>
+             <view><text>交房时间</text>2020-12-01</view>
+              <view><text>楼盘ID</text>1015024</view>
+               <view><text>开发商</text>上海众承房地产开发公司</view>
+                <view><text>开发商品牌</text>待定</view>
+                 <view><text>物业公司</text>开心物业</view>
+                  <view><text>售楼部电话</text>400-500-6002</view>
+                   <view><text>建筑面积</text>待定</view>
+                    <view><text>容积率</text>待定</view>
+                     <view><text>绿化率</text>35.00%</view>
+                      <view><text>总户数</text>1002户</view>
+                       <view><text>车位数</text>990</view>
+                        <view><text>车占比</text>1：0.99</view>
           </view>
         </view>
         <view wx:if="{{orderAttr == 1}}" class='centerText'>
-          <view class='contentDetailed' >{{wuyeType}}</view>
+          <!-- <view class='contentDetailed' >{{wuyeType}}</view> -->
+          <view class='contentDetailed' >
+            <view><text>物业类型</text>住宅</view>
+             <view><text>物业费</text>3.00元/㎡/月</view>
+              <view><text>建筑类型</text>待定</view>
+               <view><text>产权年限</text>70年</view>
+                <view><text>物业类型</text>别墅</view>
+                 <view><text>物业费</text>3.00元/㎡/月</view>
+                  <view><text>建筑类型</text>待定</view>
+                   <view><text>产权年限</text>70年</view>
+                    
+          </view>
         </view>
         <view wx:if="{{orderAttr == 2}}" class='centerText'>
-          <view class='contentDetailed' >{{attachInfo}}</view>
+          <!-- <view class='contentDetailed' >{{attachInfo}}</view> -->
+          <view class='contentDetailed' >
+            <view><text>交通配套</text><view>251路，107路，225路251路，107路，225路251路，107路，225路251路，107路，225路251路，107路，225路251路，107路，225路</view></view>
+             <view><text>教育资源</text><view>高新第二学哲学</view></view>
+              <view><text>医疗环境</text><view>高新医院</view></view>
+               <view><text>商场购物</text><view>易初莲花</view></view>
+                <view><text>生活娱乐</text><view>唐延路公园，大都会</view></view>
+                    
+          </view>
         </view>
     </view>   
  

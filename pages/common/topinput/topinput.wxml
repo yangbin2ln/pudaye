@@ -1,11 +1,11 @@
 <view class='inputtop'>
-  <input type='search' placeholder-class="place-holder" placeholder='请输入商品名称或条形码查询' class='topinput' bindinput="searchtopInput" bindconfirm="searchtop" confirm-type="search" value='{{searchtop}}'></input>
+  <input type='search' placeholder-class="place-holder" placeholder='请输入商铺名称' class='topinput' bindinput="searchtopInput" bindconfirm="searchtop" confirm-type="search" value='{{searchtop}}'></input>
    <view class='iconfont icon-sousuo search' bindtap="searchtop"></view> 
   <!-- <button open-type="contact" style='height:auto;line-height:60rpx' hidden="{{formtype}}">
     <view class='iconfont '></view>
   </button> -->
   <!-- <view class='iconfont {{iconsimg[iconsindex-1].img}} fenlei' bindtap="icons" hidden="{{!formtype}}"></view> -->
-  <view class='iconfont icon-xiaoxi1 sao' bindtap="sao" bindtap="scancode" hidden="{{formtype2}}"></view>
+  <!-- <view class='iconfont icon-xiaoxi1 sao' bindtap="sao" bindtap="scancode" hidden="{{formtype2}}"></view> -->
   <!-- <image src='{{imgurl}}cat-all/groip_icon_return.png' class='arrow' bindtap="goback" hidden="{{!formtype2}}"></image> -->
   <!-- <view class='iconfont icon-gengduo1 arrow' bindtap="sao" bindtap="goback" hidden="{{!formtype2}}"></view> -->
 </view>

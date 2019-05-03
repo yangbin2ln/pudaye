@@ -1519,7 +1519,7 @@ padding-bottom:25rpx;
 
 .topinput {
   background-color:#f3f3f3;
-  width:520rpx;
+  width:600rpx;
   border-radius:30rpx;
   margin-left:30rpx;
   padding-left:20rpx;
@@ -1539,7 +1539,7 @@ padding-bottom:25rpx;
   width: 28rpx;
   height: 28rpx;
   top: 10rpx;
-  right: 135rpx;
+  right: 65rpx;
 }
 
 .kefu {
@@ -1670,11 +1670,6 @@ padding-bottom:25rpx;
   width: 59rpx;
   height: 67rpx;
 }
-
-.home-home {
-  border-right: 1rpx solid #d9d9d9;
-}
-
 .bottomcar {
   height: 80rpx;
   width: 100%;
@@ -1683,13 +1678,15 @@ padding-bottom:25rpx;
   bottom: 0rpx;
   background-color: white;
   z-index: 500;
-  box-shadow: 2px -2px 5px #f3f3f3;
+  box-shadow: 2rpx -2rpx 5rpx #f3f3f3;
   display: flex;
+  border: none;
 }
 
 .bottomcar-home {
   width: 20%;
   font-size: 24rpx;
+  padding-top:10rpx;
 }
 
 .Searchbottomcar-home {
@@ -1698,10 +1695,13 @@ padding-bottom:25rpx;
 }
 
 .bottomcar-buy {
-  width: 60%;
-  font-size: 30rpx;
-  line-height: 80rpx;
-  color: white;
+ width:60%;
+font-size:30rpx;
+line-height:65rpx;
+color:white;
+border-radius:50rpx;
+height:65rpx;
+margin:10rpx;
 }
 
 .buy-in {
@@ -1709,7 +1709,7 @@ padding-bottom:25rpx;
 }
 
 .now-in {
-  background-color: #000;
+  background-color: #e4583f;
 }
 
 .save {
@@ -1720,10 +1720,11 @@ padding-bottom:25rpx;
 }
 
 .img-bot {
-  width: 45rpx;
-  height: 45rpx;
+  width: 40rpx;
+  height: 40rpx;
+  text-align: center;
+  margin-top: 5rpx;
   margin: auto;
-  font-size: 40rpx;
 }
 
 .bot-kefu {
@@ -1979,7 +1980,8 @@ button[class="con_listbox"]::after {
 
 .centerText {
   text-align: center;
-  padding-top: 100rpx;
+  padding-top: 50rpx;
+  line-height: 50rpx;
 }
 
 .remarks {
@@ -2004,4 +2006,14 @@ button[class="con_listbox"]::after {
   display:-webkit-box;
   -webkit-line-clamp:1;
   -webkit-box-orient:vertical;
+}
+.contentDetailed{ text-align: left;}
+.contentDetailed view{
+  color: #000;
+}
+
+.contentDetailed text{
+  color:#999;
+  width:200rpx;
+  display:inline-block;
 }

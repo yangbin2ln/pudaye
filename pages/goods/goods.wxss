@@ -726,7 +726,10 @@
 .share button{
   background: #fff;
   border: none;
-  font-size: 24rpx;
+  font-size: 20rpx;
   line-height:30rpx;
   position: inherit;
+}
+.bottomcar-home{
+  font-size: 20rpx;
 }

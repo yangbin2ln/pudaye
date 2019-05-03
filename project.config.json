@@ -13,6 +13,8 @@
 	"appid": "wx1ec0ed192980dc5b",
 	"projectname": "shops",
 	"isGameTourist": false,
+	"simulatorType": "wechat",
+	"simulatorPluginLibVersion": {},
 	"condition": {
 		"search": {
 			"current": -1,

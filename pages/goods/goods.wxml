@@ -85,7 +85,7 @@
       <navigator url="../user/dormitory/dormitory">查看更多</navigator>
     </view>
 
-    <view class='title'>楼盘信息 </view>
+    <view class='Mtitle'>楼盘信息 </view>
     <view class='d2'>
       <view>开发商
         <text>{{developeBrand}}</text>
@@ -115,14 +115,21 @@
   <!-- 详情底部 -->
   <view class='bottomcar'>
     <view class='bottomcar-home home-home'>
-      <view>
-        <button open-type="share">转发</button>
+      <view class='share'>
+      <view class='iconfont icon-shoucang img-bot' bindtap="gotocart"></view>
+        <button open-type="share">收藏</button>
       </view>
     </view>
     <view class='bottomcar-home'>
       <view>
-        <view class='iconfont icon-gouwuche img-bot' bindtap="gotocart"></view>
+        <view class='iconfont icon-dianhua img-bot' bindtap="gotocart"></view>
         <view class="{{ tabItem.color}}" bindtap="gotocart">项目经理</view>
+      </view>
+    </view>
+    <view class='bottomcar-home'>
+      <view>
+        <view class='iconfont icon-erweima img-bot'></view>
+        <view class="{{ tabItem.color}}" bindtap="gotocart">生成海报</view>
       </view>
     </view>
     <view class='bottomcar-buy now-in' bindtap='gotocart2'>
