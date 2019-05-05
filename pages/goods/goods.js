@@ -27,16 +27,14 @@ Page({
   onShareAppMessage() {
 
   },
-  gotocart: function () {
-    wx.makePhoneCall({
-      phoneNumber: '1340000****' // 仅为示例，并非真实的电话号码
-    })
+  gotocart: function (e) {
+    if(e.currentTarget.dataset.phone){
+      wx.makePhoneCall({
+        phoneNumber: e.currentTarget.dataset.phone // 仅为示例，并非真实的电话号码
+      })
+    }
   },
-  gotocart2: function () {
-    wx.makePhoneCall({
-      phoneNumber: '1516699****' // 仅为示例，并非真实的电话号码
-    })
-  },
+ 
  
   /**
    * 生命周期函数--监听页面加载
@@ -84,6 +82,6 @@ Page({
   },
 
   collect: function(e){
-    Page.onShareAppMessage();
+     
   }
 })

@@ -115,24 +115,28 @@
   <!-- 详情底部 -->
   <view class='bottomcar'>
     <view class='bottomcar-home home-home'>
-      <view class='share'>
-      <view class='iconfont icon-shoucang img-bot' bindtap="gotocart"></view>
-        <button open-type="share">收藏</button>
+      <view>
+      <view class='iconfont icon-shoucang img-bot' data-phone="12121212" bindtap="collect"></view>
+        <view class="{{ tabItem.color}}" bindtap="collect">收藏</view>
       </view>
     </view>
     <view class='bottomcar-home'>
-      <view>
-        <view class='iconfont icon-dianhua img-bot' bindtap="gotocart"></view>
-        <view class="{{ tabItem.color}}" bindtap="gotocart">项目经理</view>
+      <view data-phone="456465" bindtap="gotocart">
+        <view class='iconfont icon-dianhua img-bot'></view>
+        <view class="{{ tabItem.color}}" >项目经理</view>
       </view>
     </view>
     <view class='bottomcar-home'>
-      <view>
-        <view class='iconfont icon-erweima img-bot'></view>
-        <view class="{{ tabItem.color}}" bindtap="gotocart">生成海报</view>
-      </view>
+      <navigator url="../haibao/haibao">
+        <view>
+          <view class='iconfont icon-erweima img-bot'></view>
+          <view class="{{ tabItem.color}}">
+            生成海报
+          </view>
+        </view>
+      </navigator>
     </view>
-    <view class='bottomcar-buy now-in' bindtap='gotocart2'>
+    <view class='bottomcar-buy now-in' data-phone="5857878" bindtap='gotocart'>
       <text>咨询经纪人</text>
     </view>
   </view>

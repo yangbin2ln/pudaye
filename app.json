@@ -9,6 +9,7 @@
     "pages/user/collect/collect",
     "pages/user/login_reg/login_reg",
     "pages/map/map",
+    "pages/haibao/haibao",
     "pages/user/forget/forget"
   ],
   "window": {
