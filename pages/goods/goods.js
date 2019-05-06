@@ -5,7 +5,9 @@ Page({
    * 页面的初始数据
    */
   data: {
-     fileurl: getApp().data.fileurl
+     fileurl: getApp().data.fileurl,
+     collected: false,
+     floorstatus: false
   },
   
   goTop: function (e) {
@@ -82,6 +84,24 @@ Page({
   },
 
   collect: function(e){
-     
+    wx.showToast({
+      title: '收藏成功',
+      icon: 'success',
+      duration: 2000
+    });
+    this.setData({
+      collected: true
+    })
+  },
+
+  nocollect: function(){
+    wx.showToast({
+      title: '已取消收藏',
+      icon: 'success',
+      duration: 2000
+    })
+    this.setData({
+      collected: false
+    })
   }
 })

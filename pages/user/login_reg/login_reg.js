@@ -40,27 +40,59 @@ Page({
     });
   },
   bindGetUserInfo: function(e) {
-    var self = this;
-    if (e.detail.userInfo) {
-		wx.showModal({
-		  title: '登录成功',
-		  content: '欢迎您，' + e.detail.userInfo.nickName,
-		  showCancel: false,
-		  success: function(){
-			wx.switchTab({
-				  url: '/pages/user/user'
-				});
-			wx.setStorageSync(app.data.logininfokey, e.detail.userInfo);
-		  }
-		})
+    wx.login({
+      success: function(res) {
+        console.log('reswlogin', res)
+        if (res.code) {
+          util.request(app.data.apiurl + "/wechat/redirectLogin", {
+            code: res.code
+          }, function(r) {
+            console.log('res', r)
+            if (r.success > 0) {
+              		wx.showModal({
+                    title: '登录成功',
+                    content: '欢迎您，' + e.detail.userInfo.nickName,
+                    showCancel: false,
+                    success: function(){
+                    wx.switchTab({
+                        url: '/pages/user/user'
+                      });
+                    e.detail.userInfo.openid = r.data.openid;
+                    e.detail.userInfo.id = r.data.id;
+                    wx.setStorageSync(app.data.logininfokey, e.detail.userInfo);
+                    }
+                  })
+            } else {
+               
+            }
+          });
+        }
+      }
+    });
 
-    } else {
-      wx.showModal({
-        title: "提示",
-        content: "用户授权失败，请授权",
-        showCancel: false
-      });
-    }
+
+    // console.log('aaa', e.detail.userInfo)
+    // var self = this;
+    // if (e.detail.userInfo) {
+		// wx.showModal({
+		//   title: '登录成功',
+		//   content: '欢迎您，' + e.detail.userInfo.nickName,
+		//   showCancel: false,
+		//   success: function(){
+		// 	wx.switchTab({
+		// 		  url: '/pages/user/user'
+		// 		});
+		// 	wx.setStorageSync(app.data.logininfokey, e.detail.userInfo);
+		//   }
+		// })
+
+    // } else {
+    //   wx.showModal({
+    //     title: "提示",
+    //     content: "用户授权失败，请授权",
+    //     showCancel: false
+    //   });
+    // }
 
   },
   inputUser: function(e) {

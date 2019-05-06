@@ -1,24 +1,57 @@
-<view class="container">
-  <view wx:if="{{collect.length>0}}" class="touch-item {{item.isTouchMove ? 'touch-move-active' : ''}}" data-index="{{index}}" bindtouchstart="touchstart" bindtouchmove="touchmove" wx:for="{{collect}}" wx:key="">
-    <view class="h25"></view>
-    <view class="content" data-id="{{item.goods_id}}" catchtap='goGoods'>
-      <view class="goodsText">
-        <view class='goods_name'>{{item.goods_name}}</view>
-        <!-- <view class='sel'>会员价格：￥{{item.shop_price}}</view> -->
+<scroll-view class="container" scroll-y="true"  scroll-top="{{scrollTop}}" style="position:absolute; top:0; left:0; right:0; bottom:0;" >
+  <view>
+    <view style="width:100%;heigth:100%;" class='content'>
+      <!--商品展示-->
+      <view class="goods">
+        <text class='tit'>我的收藏</text>  
+        <view wx:for="{{collect}}" wx:for-item="obj" wx:key="id" class="goods_show_box-3">
+          <view class="goods_box">
+          <navigator url="../../goods/goods?id={{obj.id}}" hover-class="navigator-hover">         
+            <view class="img_box">
+              <image  class="goods_image" src="{{fileurl + obj.smallImgSin}}"></image>
+            </view>
+            <view class="text_box">
+              <view class="goods_name">{{obj.dormitoryName}}</view>              
+              <view class="goods_desc">
+                <view class="goods_sell_number">{{obj.minArea}}-{{obj.maxArea}}㎡</view>
+                <view>均价<view class="goods_price ">￥{{obj.sellPrice}}元</view>/㎡/月</view>
+              </view>
+              <view class='protag'>
+                <view wx:for="{{obj.labelNamesArr}}" wx:for-item="label" wx:key="id" >{{label}}</view>
+              </view>
+              <view class='addr'>{{obj.address}}</view>              
+            </view>
+          </navigator>  
+
+          </view>
+        </view>
+       
+       <view hidden='{{collect.length>0}}' class='text-center'>
+        <view>
+          <image class="cartImg" src="{{imgurl}}all/category.png"></image>
+        </view>
+        <text class='f30'>没有宝贝哦，不如去添加宝贝</text>
+        <view class='btnBox'>
+          <view class='Btn' bindtap='goHome'>去收藏</view>
+        </view>
       </view>
-      <view class="goodsImgBox">
-        <image mode="aspectFit" src="{{goodsimgurl+item.goods_img}}"></image>
+
       </view>
-    </view>
-    <view class="del" catchtap="delCollect" data-index="{{index}}" data-id="{{item.rec_id}}">取消收藏</view>
+    </view>   
   </view>
-  <view hidden='{{collect.length>0}}' class='text-center'>
-    <view>
-      <image class="cartImg" src="{{imgurl}}all/category.png"></image>
-    </view>
-    <text class='f30'>没有宝贝哦，不如去添加宝贝</text>
-    <view class='btnBox'>
-      <view class='Btn' bindtap='goHome'>去收藏</view>
-    </view>
+</scroll-view>
+<view class='fudong'>
+  <view class="widget-goTop " wx:if="{{floorstatus}}" bindtap="goTop">
+    <view class='iconfont icon-huidingbu litt'></view>
   </view>
+  <view class="widget-goTop " bindtap="scancodeEx">
+    <button open-type="contact" style='height:auto;line-height:60rpx' hidden="{{formtype}}">
+      <view class='iconfont icon-kefuICON kefu'></view>
+    </button>
+  </view>
+
+
+
+
 </view>
+ 

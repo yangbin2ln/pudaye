@@ -62,6 +62,10 @@ function request(url, data, doSuccess, method, showLoading,doFail, doComplete) {
       title: '处理中',
     });
   }
+
+  var logininfo = wx.getStorageSync(getApp().data.logininfokey);
+  data.userId = logininfo.id;
+
   //网络请求
   wx.request({
     url: url,
