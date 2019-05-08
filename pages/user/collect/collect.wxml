@@ -28,11 +28,11 @@
        
        <view hidden='{{collect.length>0}}' class='text-center'>
         <view>
-          <image class="cartImg" src="{{imgurl}}all/category.png"></image>
+          <image class="cartImg" src="{{getApp().data.fileurl}}/images/all/bottombar/category.png"></image>
         </view>
         <text class='f30'>没有宝贝哦，不如去添加宝贝</text>
         <view class='btnBox'>
-          <view class='Btn' bindtap='goHome'>去收藏</view>
+          <view style="text-align:center;" class='Btn' bindtap='goHome'>去收藏</view>
         </view>
       </view>
 

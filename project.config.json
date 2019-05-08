@@ -11,7 +11,7 @@
 	"compileType": "miniprogram",
 	"libVersion": "2.2.5",
 	"appid": "wx1ec0ed192980dc5b",
-	"projectname": "shops",
+	"projectname": "pudaye",
 	"isGameTourist": false,
 	"simulatorType": "wechat",
 	"simulatorPluginLibVersion": {},
@@ -33,7 +33,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": -1,
+			"current": 2,
 			"list": [
 				{
 					"id": 0,
@@ -50,6 +50,13 @@
 					"name": "测试",
 					"pathName": "pages/test/test",
 					"query": ""
+				},
+				{
+					"id": 2,
+					"name": "test",
+					"pathName": "pages/index/index",
+					"query": "page=goods&id=5",
+					"scene": 1001
 				}
 			]
 		}

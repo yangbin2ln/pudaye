@@ -64,7 +64,9 @@ function request(url, data, doSuccess, method, showLoading,doFail, doComplete) {
   }
 
   var logininfo = wx.getStorageSync(getApp().data.logininfokey);
-  data.userId = logininfo.id;
+  if(logininfo.id){
+    data.userId = logininfo.id;
+  }
 
   //网络请求
   wx.request({
@@ -78,7 +80,13 @@ function request(url, data, doSuccess, method, showLoading,doFail, doComplete) {
     success: function(res) {
       if (typeof doSuccess == "function") {
         if (!res.data.success) {
-          showModal(res.data.message);
+          if(res.data.code == 'sessionStatus'){
+            wx.removeStorageSync(getApp().data.logininfokey);   
+            wx.redirectTo({
+              url: '/pages/user/login_reg/login_reg',
+            })
+          }
+          showModal(res.data.msg);
         } else {
           doSuccess(res.data);
         }

@@ -26,9 +26,6 @@
           <!-- <view class='contentDetailed' >{{wuyeType}}</view> -->
           <view class='contentDetailed' >
                 <view><text>物业类型</text>{{wuyeType}}</view>
-                <view><text>物业费</text>3.00元/㎡/月</view>
-                <view><text>物业费</text>hirePrice元/㎡/月</view>
-                    
           </view>
         </view>
         <view wx:if="{{orderAttr == 2}}" class='centerText'>

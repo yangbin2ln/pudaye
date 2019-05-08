@@ -64,7 +64,7 @@ Page({
         let data = {
           lunboImgsArr: lunboImgs,
           huxingImgsArr: huxingImgs,
-          labelNamesArr: res.data.labelNames.split(',')
+          labelNamesArr: res.data.labelNames.split(','),
          }
          for(key in res.data){
            data[key] = res.data[key];
@@ -84,24 +84,43 @@ Page({
   },
 
   collect: function(e){
-    wx.showToast({
-      title: '收藏成功',
-      icon: 'success',
-      duration: 2000
-    });
-    this.setData({
-      collected: true
-    })
+    let self = this;
+    let id = this.data.id;
+    util.request(
+      app.data.apiurl + '/web/usercollectdor/add', {
+        dormitoryId: id
+      },
+      function(res) {
+        wx.showToast({
+          title: '收藏成功',
+          icon: 'success',
+          duration: 2000
+        });
+        self.setData({
+          collected: true
+        })  
+      }
+    );
   },
 
-  nocollect: function(){
-    wx.showToast({
-      title: '已取消收藏',
-      icon: 'success',
-      duration: 2000
-    })
-    this.setData({
-      collected: false
-    })
+  nocollect: function(e){
+    let self = this;
+    let id = this.data.id;
+    util.request(
+      app.data.apiurl + '/web/usercollectdor/delete', {
+        dormitoryId: id
+      },
+      function(res) {
+        wx.showToast({
+          title: '已取消收藏',
+          icon: 'success',
+          duration: 2000
+        })
+        self.setData({
+          collected: false
+        })
+        
+      }
+    );
   }
 })

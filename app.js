@@ -33,7 +33,15 @@ App({
     hottype: "",
     hottypeName: "",
   },
-  onLaunch: function() {
+  onLaunch: function(options) {
+    console.log('launch options', options)
+
+    if(options.query.scene) {
+      let scene = decodeURIComponent(options.query.scene);
+      console.log('scene', scene)
+      // 后续处理scene
+    }
+
     var that = this;
     wx.getSystemInfo({ //  获取页面的有关信息
       success: function(res) {
@@ -60,11 +68,19 @@ App({
   isLogin: function() {
     var logininfo = wx.getStorageSync(this.data.logininfokey);
     this.data.logininfo = logininfo;
-    if (logininfo == '' || logininfo == undefined || logininfo.user_id == '') {
+    if (logininfo == '' || logininfo == undefined) {
       return false;
     } else {
       return true;
     }
+  },
+  isBindMobile: function() {
+    var logininfo = wx.getStorageSync(this.data.logininfokey);
+    this.data.logininfo = logininfo;
+    if (logininfo == '' || logininfo == undefined || !logininfo.mobile || logininfo.mobile == '') {
+      return false;
+    }
+    return true;
   },
   loginCheck: function(url) {
     if (url == undefined) {

@@ -8,14 +8,11 @@
           style='height:272rpx'
           indicator-active-color='rgba(239, 20, 20, 0.91)'
         >
-            <swiper-item>
+            <swiper-item wx:for="{{lunboImg}}" wx:for-item="obj" wx:key="id" >
               <image height="500" class="goods_image2"
-              src="http://pudy.studysns.club/pudy/images/banner.jpg" />
+              src="{{obj}}" />
             </swiper-item>
-            <swiper-item>
-              <image height="500" class="goods_image2"
-              src="http://pudy.studysns.club/pudy/images/banner.jpg" />
-            </swiper-item>
+            
       </swiper>
   </view>
   <text class='tit'>帮我找铺</text>    

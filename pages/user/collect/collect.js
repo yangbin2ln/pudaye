@@ -13,9 +13,19 @@ Page({
      
   },
   onShow: function(){
+    this.loadList();
+  },
+
+  goHome: function(){
+    wx.switchTab({
+      url: '../../index/index'
+    });
+  },
+
+  loadList: function(){
     let self = this;
     util.request(
-      app.data.apiurl + '/web/dormitoryinfo/loadAllGrid', {
+      app.data.apiurl + '/web/dormitoryinfo/loadAllGrid/collect', {
 
       },
       function(res) {

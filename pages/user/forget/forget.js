@@ -11,7 +11,9 @@ Page({
     validcode: '',
     password: '',
     confirmpassword: '',
-    localip: ''
+    localip: '',
+    isSend: false,
+    remainSeconds: 60
   },
   mobile: function(e) {
     this.data.mobile = e.detail.value;
@@ -26,19 +28,31 @@ Page({
     this.data.confirmpassword = e.detail.value;
   },
   sendvalid: function(e) {
+    let self = this;
     if (this.data.mobile == "") {
       util.showErrorModal("手机号码不能为空");
       return;
     }
-    var self = this;
-    util.request(app.data.apiurl + 'api/Index/SendValid', {
+    util.request(app.data.apiurl + '/web/sms/send', {
       mobile: self.data.mobile
-    }, function(res) {
-      if (res.data.list == 0) {
-        util.showErrorModal("手机号不正确");
-      } else {
+    }, function(res) {     
         util.showErrorModal("验证码发送成功");
-      }
+        self.setData({
+          isSend: true,
+          remainSeconds: 60
+        });
+        let t = setInterval(function(){
+          self.setData({
+            remainSeconds: --self.data.remainSeconds
+          });
+        }, 1000);
+        setTimeout(function(){
+          self.setData({
+            isSend: false
+          });
+          clearInterval(t);
+        }, 60000);
+
     });
   },
   resetPassword: function(e) {
@@ -59,28 +73,29 @@ Page({
       return
     }
     var self = this;
-    util.request(app.data.apiurl + 'api/Index/ResetPassword', {
+    util.request(app.data.apiurl + '/wechat/login', {
       mobile: self.data.mobile,
-      validcode: self.data.validcode,
-      newPassword: self.data.password
+      code: self.data.validcode,
+      pwd: self.data.password
     }, function(res) {
-      if (res.data.list == -1) {
-        util.showErrorModal("验证码不正确");
-      } else if (res.data.list == 0) {
-        util.showErrorModal("手机号不存在");
-      } else {
-        util.showErrorModal("密码重置成功请登录", function() {
-          wx.navigateBack({
-            delta: 1
-          });
-        });
-      }
+      var logininfo = wx.getStorageSync(app.data.logininfokey);
+      logininfo.mobile = res.data.mobile;
+      wx.setStorageSync(app.data.logininfokey, logininfo);
+      wx.switchTab({
+        url: '/pages/user/user'
+      });
     });
   },
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function(options) {},
+  onLoad: function(options) {
+    // if(app.isBindMobile()){
+    //   wx.redirectTo({
+    //     url: '/pages/user/login_reg/login_reg',
+    //   });
+    // }
+  },
 
   /**
    * 生命周期函数--监听页面初次渲染完成

@@ -8,6 +8,7 @@ Page({
   data: {
     fileurl: getApp().data.fileurl,
     goodsList: [],
+    lunboImg: [],
     dormitoryName: '',
     sort_group: ['销量', '价格', '人气', '筛选'],
 
@@ -16,36 +17,7 @@ Page({
     keywords: "",
     
   },
-  scancodeEx: function() {
-    // 检查是否已经登录
-    if (!app.loginCheck()) {
-      return;
-    }
-    var self = this;
-    wx.scanCode({
-      success: function(res) {
-        util.request(
-          app.data.apiurl + 'api/Goods/AddToCart', {
-            user_id: app.data.logininfo.user_id,
-            goods_number: 1,
-            goods_sn: res.result,
-            goods_attr: "日本仓直邮"
-          },
-          function() {
-            app.getCartCount(function(e) {
-              self.setData({
-                CartCount: e
-              });
-            });
-            self.scancodeEx();
-          }
-        );
-      },
-      fail: function(res) {
-        console.log(res)
-      }
-    })
-  },
+  
   searchtopInput: function(e) {
     let self = this;
     this.setData({
@@ -83,7 +55,18 @@ Page({
       scrollTop: 0
     });
   },
-  onLoad: function (options) {
+  onLoad: function (query) {
+    // const scene = decodeURIComponent(query.scene)
+    console.log("index 生命周期 onload", query, decodeURIComponent(query.scene))
+
+    if(query.scene){
+      let goodsId = decodeURIComponent(query.scene);
+        wx.navigateTo({
+          url: '../goods/goods?id=' + goodsId
+        });
+    }
+
+
     //设置可转发
     wx.showShareMenu({
       withShareTicket: true
@@ -93,10 +76,17 @@ Page({
         wx.redirectTo({
           url: '/pages/user/login_reg/login_reg',
         });
+      }else if(!app.isBindMobile()){
+        wx.redirectTo({
+          url: '/pages/user/forget/forget',
+        });
       }
   },
   onShow: function(){
     let self = this;
+
+    this.getLunbo();
+
     util.request(
       app.data.apiurl + '/web/dormitoryinfo/loadAllGrid', {
         dormitoryName: self.data.dormitoryName,
@@ -116,6 +106,27 @@ Page({
         }
         self.setData({
           goodsList: res.data
+        });
+      }
+    );
+    
+  },
+
+  getLunbo: function(){
+    let self = this;
+    util.request(
+      app.data.apiurl + '/web/indexlunbo/loadAllGrid', {
+         
+      },
+      function(res) {
+        let imgsStr = res.data[0].imgs;
+        let imgsArr = JSON.parse(imgsStr);
+        let arr = [];
+        for(key in imgsArr){
+          arr.push(app.data.fileurl + imgsArr[key].filePath)
+        }
+        self.setData({
+          lunboImg: arr
         });
       }
     );

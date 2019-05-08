@@ -5,21 +5,21 @@
     <image src="http://pudy.studysns.club/pudy/images/logo.png"></image>
     <!-- 欢迎登录进入白幡上町分销 -->
   </view>
-  <view class='boxWhite'>
+  <!--<view class='boxWhite'>
     <view class="bottomLine">
-      <input placeholder="手机号/用户名/电子邮件地址" bindinput='inputUser' />
+      <input placeholder="手机号" bindinput='inputUser' />
     </view>
     <view class="bottomLine">
       <input placeholder="密码" bindinput='inputPassword' password />
     </view>
-  </view>
-  <view class='btnBox' style=" padding-top:0rpx;">
-    <button type="primary" bindtap="login" hover-class="other-button-hover" open-type="getUserInfo" bindgetuserinfo='UserLogin'>用户名登录</button>
+  </view>-->
+  <view class='btnBox' style=" padding-top:10%;">
+    <!--<button type="primary" bindtap="login" hover-class="other-button-hover" open-type="getUserInfo" bindgetuserinfo='UserLogin'>手机号登录</button>-->
     <view style="height:25rpx;"></view>
     <button type="primary" class='wxBtn' hover-class="other-button-hover" open-type="getUserInfo" bindgetuserinfo='bindGetUserInfo'>
       <view class='iconfont icon-weixin1 weixin_icons'></view>
       微信用户一键登录</button>
-       <view class='forget'><navigator url="../forget/forget" hover-class="none">忘记密码？</navigator></view>  
+        
   </view>
   <!--弹窗-->
 

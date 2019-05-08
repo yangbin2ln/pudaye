@@ -141,7 +141,7 @@
 
 .house {
   padding-top: 30rpx;
-  height: 350rpx;
+  height: 270rpx;
   width: 327rpx;
   display: inline-block;
 }

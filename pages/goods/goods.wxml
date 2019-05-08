@@ -22,7 +22,7 @@
     <view class='jiage'>
       <view>
         <text>参考出租均价</text>
-        <text class='price'>{{hirePrice}}元/m²/月</text>
+        <text class='price'>{{hirePrice}}元/月</text>
       </view>
       <view>
         <text>面积</text>
@@ -68,12 +68,12 @@
           <image class="goods_image hx_detail_big" data-preimg=".hx_detail_big" data-src="{{fileurl + obj.filePath}}"
            bindtap="viewImg" src="{{fileurl + obj.filePath}}"></image>
         </view>
-        <view class='shibie'>3室2厅1卫 88㎡
+        <!--<view class='shibie'>3室2厅1卫 88㎡
           <text>在售</text>
         </view>
         <view class='hx'>A户型（住宅）
           <view class='hxPrice'>378万起</view>
-        </view>
+        </view>-->
       </view>
       </view>
     </scroll-view>
@@ -122,14 +122,9 @@
       </view>
         
     </view>
+     
     <view class='bottomcar-home'>
-      <view data-phone="{{sellMonile}}" bindtap="gotocart">
-        <view class='iconfont icon-dianhua img-bot'></view>
-        <view class="{{ tabItem.color}}" >项目经理</view>
-      </view>
-    </view>
-    <view class='bottomcar-home'>
-      <navigator url="../haibao/haibao">
+      <navigator url="../haibao/haibao?id={{id}}">
         <view>
           <view class='iconfont icon-erweima img-bot'></view>
           <view class="{{ tabItem.color}}">
@@ -139,7 +134,7 @@
       </navigator>
     </view>
     <view class='bottomcar-buy now-in' data-phone="{{sellMonile}}" bindtap='gotocart'>
-      <text>咨询经纪人</text>
+      <text>项目负责人</text>
     </view>
   </view>
 </scroll-view>

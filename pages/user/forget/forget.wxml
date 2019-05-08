@@ -7,7 +7,8 @@
       <input placeholder="请输入手机号" bindinput='mobile' />
     </view>
     <view class="bottomLine">
-      <view class='yzm' bindtap='sendvalid'>发送验证码</view>
+      <view wx:if="{{!isSend}}" class='yzm' bindtap='sendvalid'>发送验证码</view>
+      <view wx:if="{{isSend}}" style="color:red" class='yzm'>{{remainSeconds}}S</view>
       <input placeholder="请输入验证码" bindinput='validcode' />
     </view>
     <view class="bottomLine">
