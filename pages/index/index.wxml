@@ -31,7 +31,7 @@
               <view class="goods_name">{{obj.dormitoryName}}</view>              
               <view class="goods_desc">
                 <view class="goods_sell_number">{{obj.minArea}}-{{obj.maxArea}}㎡</view>
-                <view>均价<view class="goods_price ">￥{{obj.sellPrice}}元</view>/㎡/月</view>
+                <view>均价<view class="goods_price ">￥{{obj.sellPrice}}元</view>/㎡</view>
               </view>
               <view class='protag'>
                 <view wx:for="{{obj.labelNamesArr}}" wx:for-item="label" wx:key="id" >{{label}}</view>

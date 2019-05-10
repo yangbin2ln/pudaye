@@ -25,7 +25,7 @@
         <view wx:if="{{orderAttr == 1}}" class='centerText'>
           <!-- <view class='contentDetailed' >{{wuyeType}}</view> -->
           <view class='contentDetailed' >
-                <view><text>物业类型</text>{{wuyeType}}</view>
+                <view><text>物业类型</text>{{wuyeType?wuyeType:'无'}}</view>
           </view>
         </view>
         <view wx:if="{{orderAttr == 2}}" class='centerText'>

@@ -21,8 +21,9 @@
     </view>
     <view class='jiage'>
       <view>
-        <text>参考出租均价</text>
-        <text class='price'>{{hirePrice}}元/月</text>
+        <text>参考出租价</text>
+        <text wx:if="{{hirePrice}}" class='price'>{{hirePrice?hirePrice:''}}元/㎡/月</text>
+        <text wx:if="{{!hirePrice}}" class='price'>暂无</text>
       </view>
       <view>
         <text>面积</text>

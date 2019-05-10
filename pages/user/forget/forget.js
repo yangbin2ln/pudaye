@@ -64,14 +64,7 @@ Page({
       util.showErrorModal("验证码不能为空");
       return;
     }
-    if (this.data.password == "") {
-      util.showErrorModal("新密码不能为空");
-      return;
-    }
-    if (this.data.password != this.data.confirmpassword) {
-      util.showErrorModal("两次密码不一致");
-      return
-    }
+   
     var self = this;
     util.request(app.data.apiurl + '/wechat/login', {
       mobile: self.data.mobile,

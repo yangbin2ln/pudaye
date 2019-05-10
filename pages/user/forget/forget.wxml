@@ -11,12 +11,7 @@
       <view wx:if="{{isSend}}" style="color:red" class='yzm'>{{remainSeconds}}S</view>
       <input placeholder="请输入验证码" bindinput='validcode' />
     </view>
-    <view class="bottomLine">
-      <input placeholder="请输入新密码" bindinput='password' password />
-    </view>
-    <view class="bottomLine">
-      <input placeholder="请再次输入新密码" bindinput='confirmpassword' password />
-    </view>
+     
   </view>
   <view class='btnBox' style=" padding-top:0rpx;">
     <button type="primary" bindtap="resetPassword" hover-class="other-button-hover">保存</button>

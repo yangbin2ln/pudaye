@@ -1366,7 +1366,7 @@ strong {
 .goods_price {
   font-size: 36rpx;
   color: #e81818;
-  margin-right: 20rpx;
+  margin-right: 5rpx;
   text-align: right;
 }
 
@@ -1499,7 +1499,6 @@ padding-bottom:25rpx;
 .goods_show_box-3 .text_box {
   width: 455rpx;
   margin-left: 255rpx;
-  position: absolute;
   margin-top: 5rpx;
   line-height: 40rpx;
 }

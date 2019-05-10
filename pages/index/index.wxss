@@ -2,7 +2,16 @@
 .banner{margin-top:85rpx; text-align: center;}
 .banner image{width:692rpx;height:272rpx; margin: 0px auto;}
 .goods_desc view{ display: inline-block;}
-.addr{font-size: 25rpx; color: #999;}
+.addr{
+    font-size: 25rpx;
+    color: #999;
+    font-size:25rpx;
+    color:#999;
+    overflow:hidden;
+    white-space:nowrap;
+    text-overflow:;
+    text-overflow:ellipsis;
+    }
 .noscroll {
   height: 100%;
   overflow: hidden;
